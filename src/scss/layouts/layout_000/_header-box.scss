@@ -1,0 +1,152 @@
+.header {
+  background-image: url("#{$i}main-slider/slider-1.jpg");
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-gap: 10px;
+  padding: 16px 10px;
+  position: relative;
+  margin: 0 -16px;
+  text-align: center;
+  @include e(logo-box) {
+  }
+  @include e(logo) {
+    max-width: 160px;
+    width: 100%;
+  }
+
+  @include e(arrow) {
+    border: 1px solid $mainColor;
+    border-radius: 4px;
+    color: $mainColor;
+    font-family: $baseFontFamily;
+    font-size: 39px;
+    line-height: 42px;
+    position: absolute;
+    text-align: center;
+    top: 60%;
+    width: 44px;
+    @include m(left) {
+      left: 2%;
+    }
+    @include m(right) {
+      right: 2%;
+    }
+  }
+  @include e(menu-button-box) {
+    position: relative;
+    padding-right: 20px;
+    margin-top: 6px;
+  }
+
+  @include e(menu-button) {
+    
+    & span {
+      &:nth-child(1) {
+        top: 0;
+      }
+      &:nth-child(2) {
+        top: 10px;
+      }
+      &:nth-child(4) {
+        top: 20px;
+      }
+      position: absolute;
+      height: 4px;
+      border-radius: 10px;
+      width: 28px;
+      background-color: $mainColor;
+      top: 0;
+      transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    }
+  }
+}
+
+.header_contacts {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  grid-column: span 4;
+  display: grid;
+  text-align: center;
+  @include e(adress) {
+    display: none;
+  }
+  @include e(working-hours) {
+    display: none;
+  }
+  @include e(phone) {
+    font-size: 14px;
+    color: $white;
+    padding: 6px 0;
+  }
+  @include e(email) {
+    font-size: 14px;
+    color: $white;
+    padding: 6px 0;
+  }
+}
+
+.heading {
+  margin: 0 auto;
+  display: grid;
+  grid-row: 5;
+  grid-column: span 4;
+  text-align: center;
+  @include e(subtitle) {
+    @extend %subtitle;
+    grid-row: 1;
+  }
+  @include e(divider) {
+    @extend %divider;
+    grid-row: 2;
+  }
+  @include e(title) {
+    @extend %title;
+    grid-row: 3;
+    max-width: 400px;
+  }
+  @include e(data) {
+    color: $white;
+    font-family: $baseFontFamily;
+    font-weight: 300;
+    font-size: rem(20px);
+    line-height: 32px;
+  }
+  @include e(button-box) {
+    text-align: center;
+    margin: 35px auto;
+  }
+  @include e(button-link) {
+    @extend %button;
+  }
+}
+
+.button {
+  overflow: hidden;
+  margin: auto;
+  width: max-content;
+  align-self: center;
+  @include e(link) {
+    display: block;
+    border: 2px solid $mainColor;
+    position: relative;
+    text-decoration: none;
+  }
+  @include e(text) {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: rem(14px);
+    font-weight: 700;
+    line-height: 24px;
+    padding: 8px 10px;
+    @include m(transparent) {
+      background-color: transparent;
+      color: $mainColor;
+    }
+    @include m(colored) {
+      background-color: $mainColor;
+    }
+    @include m(second) {
+      position: absolute;
+      bottom: -54px;
+    }
+  }
+}

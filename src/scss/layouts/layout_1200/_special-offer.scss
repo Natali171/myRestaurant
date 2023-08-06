@@ -1,0 +1,22 @@
+.special-cats {
+  @include e(box) {
+    grid-template-columns: repeat(3, 1fr);
+    & li:nth-of-type(3) {
+      display: block;
+    }
+  }
+  @include e(item) {
+    &:hover .special-cats__img {
+      transform: rotate(3deg) scale(1.05);
+      opacity: 0.6;
+    }
+  }
+  @include e(arrow) {
+    &:hover {
+      background-color: $mainColor;
+      border-color: transparent;
+      color: $black;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+.team {
+  @include e(title) {
+    font-size: 60px;
+  }
+}

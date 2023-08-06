@@ -1,0 +1,12 @@
+.strength-cats {
+  margin: 0 auto;
+
+  @include e(box) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  @include e(item) {
+    align-self: center;
+    justify-self: center;
+  }
+}

@@ -1,0 +1,24 @@
+.chefs {
+  @include e(img-box) {
+    &:hover .chefs-contacts__box {
+      transform: scale(1, 1);
+      transform-origin: right center;
+      visibility: visible;
+      background-color: rgba(228, 197, 144, 0.4);
+    }
+  }
+}
+.chefs-contacts {
+  @include e(box) {
+    transform: scale(0.6, 0.9);
+    transform-origin: right center;
+    transition: all 0.5s ease;
+  }
+  @include e(icon) {
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      background-color: $mainColor;
+      color: $black;
+    }
+  }
+}

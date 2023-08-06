@@ -1,0 +1,32 @@
+.menu-sections {
+  @include e(title) {
+    font-size: 60px;
+  }
+  @include e(box) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
+  }
+  @include e(data) {
+    grid-column: 2;
+    margin: 30px auto 50px;
+  }
+
+  @include e(item) {
+    align-self: flex-start;
+    height: 0;
+    margin: 0 auto;
+    &:nth-child(2) {
+      grid-column: 1;
+      grid-row: 1;
+    }
+    &:last-child {
+      grid-column: span 3;
+      grid-row: 2;
+      height: auto;
+    }
+  }
+  @include e(link) {
+    display: block;
+  }
+}

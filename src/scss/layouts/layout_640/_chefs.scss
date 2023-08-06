@@ -1,0 +1,22 @@
+.chefs {
+  max-width: 1200px;
+  @include e(items-box) {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, auto));
+  }
+  @include e(item) {
+  }
+  @include e(img-box) {
+    width: 320px;
+  }
+  @include e(img) {
+    width: 320px;
+  }
+  @include e(name) {
+  }
+  @include e(position) {
+  }
+  @include e(data) {
+  }
+}

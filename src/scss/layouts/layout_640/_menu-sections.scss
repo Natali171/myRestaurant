@@ -1,0 +1,24 @@
+.menu-sections {
+  @include e(box) {
+  }
+  @include e(item) {
+    &:nth-of-type(2) .menu-sections__img-box {
+      grid-column: 2;
+    }
+    &:nth-of-type(2) .menu-sections__name {
+      grid-column: 1;
+      grid-row: 1;
+    }
+  }
+  @include e(link) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  @include e(img-box) {
+    grid-row: span 2;
+  }
+  @include e(name) {
+    align-self: flex-end;
+  }
+}

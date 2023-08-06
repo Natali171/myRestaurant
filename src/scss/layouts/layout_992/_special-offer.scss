@@ -1,0 +1,16 @@
+.special-offer {
+  @include e(title) {
+    font-size: 60px;
+  }
+  @include e(button-link) {
+    font-size: rem(14px);
+    padding: 18px 24px;
+  }
+}
+.special-cats {
+  @include e(img) {
+    transition: all 500ms ease;
+    background: rgba(255, 255, 255, 0.44);
+    opacity: 1;
+  }
+}

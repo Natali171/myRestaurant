@@ -1,0 +1,27 @@
+.menu-sections {
+  @include e(title) {
+  }
+  @include e(box) {
+  }
+  @include e(data) {
+  }
+
+  @include e(item) {
+    &:hover .menu-sections__img-box::before {
+      transform: rotateY(180deg);
+    }
+    &:hover .menu-sections__img-box {
+      transform: scale(1.1);
+    }
+    &:hover .menu-sections__name {
+      font-size: rem(42px);
+      margin-top: 50px;
+    }
+  }
+  @include e(name) {
+    transition: all 0.7s ease;
+  }
+  @include e(img-box) {
+    transition: all 0.7s ease;
+  }
+}

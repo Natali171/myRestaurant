@@ -1,0 +1,116 @@
+.special-offer {
+  background-color: #0e0d0c;
+  padding: 40px 16px;
+  margin: 0 -16px;
+  position: relative;
+  @include e(header) {
+    text-align: center;
+  }
+  @include e(subtitle) {
+    @extend %subtitle;
+  }
+  @include e(divider) {
+    @extend %divider;
+  }
+  @include e(title) {
+    @extend %title;
+  }
+  @include e(button-box) {
+    text-align: center;
+    margin: 35px auto;
+  }
+  @include e(button-link) {
+    @extend %button;
+  }
+  &::before {
+    background: url("#{$i}backgrounds/pattern-9.svg") center repeat;
+    background-size: cover;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 100%;
+  }
+  &::after {
+    background: url("#{$i}backgrounds/pattern-9.svg") center repeat;
+    background-size: cover;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 15px;
+    height: 100%;
+  }
+}
+
+.special-cats {
+  position: relative;
+  text-align: center;
+  @include e(arrow) {
+    border: 1px solid $mainColor;
+    border-radius: 4px;
+    color: $mainColor;
+    font-family: $baseFontFamily;
+    font-size: 39px;
+    line-height: 42px;
+    position: absolute;
+    text-align: center;
+    top: 60%;
+    width: 44px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    @include m(left) {
+      left: 2%;
+    }
+    @include m(right) {
+      right: 2%;
+    }
+  }
+  @include e(box) {
+    padding: 0;
+    text-align: center;
+    & div:nth-child(2n + 1) {
+      margin: 2% 12px 0;
+    }
+    &:nth-child(2n) {
+      margin: 0 12px 2%;
+    }
+    & div:first-of-type {
+      display: block;
+    }
+  }
+
+  @include e(item) {
+    display: none;
+    align-self: center;
+    list-style: none;
+  }
+
+  @include e(link) {
+    text-decoration: none;
+  }
+  @include e(img-box) {
+  }
+  @include e(img) {
+    max-width: 100%;
+    width: 100%;
+  }
+  @include e(name) {
+    color: $white;
+    font-family: $secondaryFontFamily;
+    font-size: rem(25px);
+    text-transform: capitalize;
+  }
+  @include e(data) {
+    color: $grey;
+    font-family: $baseFontFamily;
+  }
+  @include e(price) {
+    color: $mainColor;
+    font-family: $secondaryFontFamily;
+    font-size: rem(20px);
+  }
+}
+.slick-track {
+}

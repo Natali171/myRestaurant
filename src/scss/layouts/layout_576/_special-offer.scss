@@ -1,0 +1,5 @@
+.special-cats {
+  @include e(item) {
+    max-width: 335px;
+  }
+}

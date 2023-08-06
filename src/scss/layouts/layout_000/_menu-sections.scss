@@ -1,0 +1,66 @@
+.menu-sections {
+  background-color: rgb(12, 13, 13);
+  background: 0% 100% no-repeat url("#{$i}backgrounds/bg-1.png"),
+    100% 0% no-repeat url("#{$i}backgrounds/bg-2.png");
+  margin: 0 -16px;
+  padding: 40px 16px;
+  text-align: center;
+  @include e(header) {
+    text-align: center;
+  }
+  @include e(subtitle) {
+    @extend %subtitle;
+  }
+  @include e(divider) {
+    @extend %divider;
+  }
+  @include e(title) {
+    @extend %title;
+  }
+  @include e(box) {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+  @include e(data) {
+    color: $white;
+    font-family: $baseFontFamily;
+    font-weight: 700;
+    line-height: 30px;
+    max-width: 500px;
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+  @include e(name) {
+    @extend %title;
+    margin: 30px auto 10px;
+  }
+  @include e(menu-link) {
+    @extend %subtitle;
+  }
+  @include e(item) {
+    margin: 0 auto;
+  }
+  @include e(link) {
+    text-decoration: none;
+  }
+  @include e(img-box) {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 80px;
+      width: 140px;
+      height: 120%;
+      top: -10%;
+      transition: all 0.5s ease;
+      background: url(/i/backgrounds/pattern-8.svg) center no-repeat;
+      overflow: visible;
+    }
+  }
+  @include e(img) {
+    display: block;
+    position: relative;
+  }
+}

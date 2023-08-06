@@ -1,0 +1,101 @@
+.reservation {
+  background: no-repeat url("#{$i}backgrounds/image-3.jpg");
+  background-size: cover;
+  padding: 40px 3%;
+  margin: 0 -16px;
+
+  @include e(title) {
+    @extend %title;
+    text-align: center;
+  }
+  @include e(info) {
+    color: $white;
+    font-family: $baseFontFamily;
+    text-align: center;
+  }
+  @include e(phone) {
+    color: $mainColor;
+  }
+  @include e(box) {
+    background-color: #0e0d0c;
+  }
+  @include e(form) {
+    color: $white;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px 3%;
+  }
+  @include e(input) {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgb(26, 27, 28);
+    color: $grey;
+    display: block;
+    font-family: $baseFontFamily;
+    font-size: rem(16px);
+    margin-top: 20px;
+    padding: 18px 20px;
+    width: 100%;
+    &:hover {
+      border-color: $mainColor;
+    }
+    @include m(name) {
+    }
+    @include m(email) {
+    }
+    @include m(date) {
+    }
+    @include m(message) {
+      resize: none;
+    }
+  }
+  @include e(select) {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgb(26, 27, 28);
+    color: $white;
+    display: block;
+    font-family: $baseFontFamily;
+    font-size: rem(16px);
+    margin-top: 20px;
+    padding: 18px 20px;
+    width: 100%;
+    @include m(people) {
+    }
+    @include m(time) {
+    }
+  }
+  @include e(submit) {
+    font-weight: 400;
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.contacts {
+  background: $black no-repeat url("#{$i}backgrounds/pattern-4.png");
+  background-size: cover;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: $baseFontFamily;
+  padding: 20px 4px;
+  color: $white;
+  @include e(title) {
+    @extend %title;
+  }
+  @include e(subtitle) {
+    font-weight: 700;
+  }
+  @include e(phone) {
+    font-size: rem(30px);
+    padding: 12px;
+    color: $mainColor;
+  }
+  @include e(info-name) {
+    padding: 12px;
+  }
+  @include e(info) {
+    padding: 12px;
+    color: $grey;
+  }
+}

@@ -1,8 +1,9 @@
 //fonts
-$google-font: "https://fonts.googleapis.com/css?family=Ubuntu:400,500";
+$google-font: "https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,700;1,400&family=Forum&display=swap";
 $prefix: prefix- !default;
 $baseFontSize: 16px;
-$baseFontFamily: "Ubuntu", sans-serif;
+$baseFontFamily: "DM Sans", sans-serif;
+$secondaryFontFamily: "Forum", cursive;
 $mediumFontWeight: 500;
 
 $mobilePadding: (12px / $baseFontSize) * 1rem;
@@ -10,11 +11,15 @@ $desktopPadding: 1rem;
 
 // Paths
 
-$imagesPath: "../i/";
+$i: "../../../../i/";
 $fontsPath: "../fonts/";
 $usersFilesPath: "../userfiles/";
 
 // Colors
+$mainColor: rgb(228, 194, 144);
+$primaryColor: #e63a28;
+$lightGrey: #c1c1c1;
+$grey: rgb(167, 167, 167);
 $black: #000000;
 $white: #ffffff;
 $blue: #0d6efd !default;

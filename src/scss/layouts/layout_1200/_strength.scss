@@ -1,0 +1,16 @@
+.strength-cats {
+  @include e(box) {
+  }
+  @include e(item) {
+    &:hover .strength-cats__img-box {
+      transform: rotate3d(1, -1, 1, 360deg);
+      cursor: pointer;
+    }
+  }
+  @include e(img-box) {
+    transition: all 0.5s ease;
+    backface-visibility: hidden;
+  }
+  @include e(img) {
+  }
+}

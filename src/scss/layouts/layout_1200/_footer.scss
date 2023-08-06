@@ -1,0 +1,7 @@
+.footer-subscription {
+  @include e(input) {
+    &:hover {
+      border-color: $mainColor;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  @include e(contact-links) {
+    padding-top: 20px;
+  }
+}
+.footer-main {
+  flex-basis: 100%;
+}
+.footer-subscription {
+  @include e(form) {
+    gap: 0;
+  }
+}

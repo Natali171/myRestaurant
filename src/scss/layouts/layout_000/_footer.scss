@@ -1,0 +1,153 @@
+.footer {
+  margin: 0 -16px;
+  background: no-repeat url("#{$i}backgrounds/image-4.jpg");
+  background-size: cover;
+  font-family: $baseFontFamily;
+
+  @include e(main-links) {
+    padding-top: 20px;
+  }
+
+  @include e(link-box) {
+    padding: 0;
+  }
+  @include e(item) {
+    text-align: center;
+    list-style: none;
+    margin: 40px auto;
+  }
+  @include e(link) {
+    color: $lightGrey;
+    font-family: $baseFontFamily;
+    font-size: rem(12px);
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-decoration: none;
+  }
+}
+
+.footer-main {
+  background: $black no-repeat url("#{$i}backgrounds/pattern-4.png");
+  background-size: cover;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 50px 30px;
+  position: relative;
+  text-align: center;
+  @include e(logo-box) {
+    padding: 50px 0;
+  }
+  @include e(logo) {
+  }
+  @include e(info) {
+    color: $lightGrey;
+    margin: 0;
+  }
+  @include e(adress) {
+    padding: 10px auto;
+    margin: 20px auto;
+  }
+  @include e(email) {
+    color: $lightGrey;
+    text-decoration: none;
+    margin: 20px auto;
+  }
+  @include e(booking) {
+    margin: 20px auto;
+  }
+  @include e(working-hours) {
+    margin: 20px auto;
+  }
+
+  &::before {
+    background: url("#{$i}backgrounds/pattern-9.svg") center repeat;
+    background-size: cover;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 100%;
+  }
+  &::after {
+    background: url("#{$i}backgrounds/pattern-9.svg") center repeat;
+    background-size: cover;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 15px;
+    height: 100%;
+  }
+}
+.footer-subscription {
+  margin: 0 auto;
+  max-width: 400px;
+  @include e(separator) {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    & span:first-of-type {
+      right: 0;
+    }
+    & span:last-of-type {
+      left: 10px;
+    }
+  }
+  @include e(separator-item) {
+    margin: 0 1px;
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    border: 1px solid $mainColor;
+    transform: rotate(45deg);
+  }
+
+  @include e(title) {
+    color: $white;
+    font-family: $secondaryFontFamily;
+    font-size: rem(35px);
+    font-weight: 500;
+  }
+  @include e(text) {
+    color: $grey;
+  }
+  @include e(text-highlighted) {
+    color: $white;
+    font-weight: 500;
+  }
+  @include e(form) {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px auto 50px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(#{$i}icons/envelope-regular.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      left: 10px;
+      top: 14px;
+      padding: 8px 9px;
+    }
+  }
+  @include e(input) {
+    @include m(text) {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background-color: rgb(26, 27, 28);
+      color: $grey;
+      flex: 1;
+      font-family: $baseFontFamily;
+      font-size: rem(16px);
+      padding: 12px 20px 12px 40px;
+    }
+    @include m(submit) {
+      font-weight: 400;
+      text-align: center;
+      width: 100%;
+    }
+  }
+}

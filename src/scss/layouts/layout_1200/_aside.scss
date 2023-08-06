@@ -1,0 +1,9 @@
+.reservation {
+  @include e(wrap) {
+    margin: 0 10%;
+  }
+  @include e(box) {
+  }
+}
+.contacts {
+}

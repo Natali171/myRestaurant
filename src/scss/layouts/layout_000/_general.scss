@@ -1,3 +1,9 @@
+@import url($google-font);
+
+* {
+  box-sizing: border-box;
+}
+
 html {
   @include getCssVar(font-size);
 }
@@ -5,10 +11,17 @@ html {
 body {
   @include getCssVar(font-family);
   font-size: 1rem;
+  font-family: $baseFontFamily;
+  background-color: rgb(12, 13, 13);
 }
 
 .container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 12px;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.fluid-box-img {
+  max-width: 100%;
+  width: 100%;
 }

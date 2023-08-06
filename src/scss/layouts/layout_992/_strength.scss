@@ -1,0 +1,13 @@
+.strength {
+  @include e(title) {
+    font-size: 60px;
+  }
+}
+
+.strength-cats {
+  margin: 0 auto;
+  @include e(box) {
+    display: flex;
+    gap: 4%;
+  }
+}

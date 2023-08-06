@@ -1,0 +1,20 @@
+.reservation {
+  @include e(wrap) {
+    margin: 0 5%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+  @include e(box) {
+    align-self: flex-end;
+    margin: 0;
+  }
+  @include e(form) {
+    margin: 0 auto;
+  }
+}
+.contacts {
+  margin: 0 auto;
+  align-self: flex-start;
+  padding: 0;
+  height: 100%;
+}

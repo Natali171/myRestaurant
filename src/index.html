@@ -5,24 +5,1025 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script
+      src="https://kit.fontawesome.com/31686e23d5.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="slick.css" />
   </head>
   <body>
     <div class="container">
-      <h1>Index.html</h1>
-      <a href="about.html">About.html</a>
-
-      <form>
-        <div>
-          <label for=""> Name</label>
-          <input type="text" />
+      <header class="header">
+        <div class="heading">
+          <h1 class="heading__title">Flavors Inspired by the Seasons</h1>
+          <div class="heading__divider-box">
+            <img src="i/separator.svg" alt="" class="menu__divider" />
+          </div>
+          <h2 class="heading__subtitle">delightful experience</h2>
+          <p class="heading__data">
+            Come with family & feel the joy of mouthwatering food
+          </p>
+          <div class="button">
+            <a class="button__link">
+              <div
+                class="button__text button__text_first button__text_transparent"
+              >
+                view our menu
+              </div>
+              <div
+                class="button__text button__text_second button__text_colored"
+              >
+                view our menu
+              </div>
+            </a>
+          </div>
         </div>
-        <div><button>Click me</button></div>
-      </form>
+        <div class="header__arrow special-cats__arrow_left">&lt</div>
+        <div class="header__arrow special-cats__arrow_right">&gt</div>
+        <div class="header_contacts">
+          <div class="header_contacts__adress">
+            Restaurant St, Delicious City, London 9578, UK
+          </div>
+          <div class="header_contacts__working-hours">
+            Daily : 8.00 am to 10.00 pm
+          </div>
+          <div class="header_contacts__phone">
+            <i class="fa-solid fa-phone"></i> +1 123 456 7890
+          </div>
+          <div class="header_contacts__email">
+            <i class="fa-regular fa-envelope"></i> booking@restaurant.com
+          </div>
+        </div>
+        <div class="header__logo-box">
+          <img src="i/resource/logo.png" alt="" class="header__logo" />
+        </div>
+        <div class="header__menu-button-box">
+          <a href="" class="header__menu-button">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+        <nav class="main-menu">
+          <ul class="main-menu__box">
+            <li class="main-menu__item">
+              <a href="#" class="main-menu__link">home</a>
+            </li>
+            <li class="main-menu__item">
+              <a href="#" class="main-menu__link"
+                >menus <i class="fa-solid fa-angle-down"></i
+              ></a>
+              <ul class="main-menu__submenu-box">
+                <li
+                  class="main-menu__submenu-item main-menu__submenu-item_menus"
+                >
+                  <a href="#" class="main-menu__submenu-link">menu list 1</a>
+                </li>
+                <li
+                  class="main-menu__submenu-item main-menu__submenu-item_menus"
+                >
+                  <a href="#" class="main-menu__submenu-link">menu list 2</a>
+                </li>
+                <li
+                  class="main-menu__submenu-item main-menu__submenu-item_menus"
+                >
+                  <a href="#" class="main-menu__submenu-link">menu list 3</a>
+                </li>
+                <li
+                  class="main-menu__submenu-item main-menu__submenu-item_menus"
+                >
+                  <a href="#" class="main-menu__submenu-link">menu list 4</a>
+                </li>
+              </ul>
+            </li>
+            <li class="main-menu__item">
+              <a href="#" class="main-menu__link">about us</a>
+            </li>
+
+            <li class="main-menu__item">
+              <a href="#" class="main-menu__link"
+                >pages <i class="fa-solid fa-angle-down"></i
+              ></a>
+              <ul class="main-menu__submenu-box">
+                <li class="main-menu__submenu-item">
+                  <a href="#" class="main-menu__submenu-link"
+                    >Dropdown menu 1</a
+                  >
+                </li>
+                <li class="main-menu__submenu-item">
+                  <a href="#" class="main-menu__submenu-link"
+                    >Dropdown menu 2</a
+                  >
+                </li>
+                <li class="main-menu__submenu-item">
+                  <a href="#" class="main-menu__submenu-link"
+                    >Dropdown menu 3 ></a
+                  >
+                  <ul class="main-menu__submenu-lv2-box">
+                    <li class="main-menu__submenu-lv2-item">
+                      <a href="#" class="main-menu__submenu-lv2-link"
+                        >Dropdown menu level 1</a
+                      >
+                    </li>
+                    <li class="main-menu__submenu-lv2-item">
+                      <a href="#" class="main-menu__submenu-lv2-link"
+                        >Dropdown menu level 2</a
+                      >
+                    </li>
+                    <li class="main-menu__submenu-lv2-item">
+                      <a href="#" class="main-menu__submenu-lv2-link"
+                        >Dropdown menu level 3</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="main-menu__submenu-item">
+                  <a href="#" class="main-menu__submenu-link"
+                    >Dropdown menu 4</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="main-menu__item">
+              <a href="#" class="main-menu__link">our chefs</a>
+            </li>
+            <li class="main-menu__item">
+              <a href="#" class="main-menu__link">contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="button">
+          <a class="button__link">
+            <div class="button__text button__text_first button__text_colored">
+              find a table
+            </div>
+            <div
+              class="button__text button__text_second button__text_transparent"
+            >
+              find a table
+            </div>
+          </a>
+        </div>
+      </header>
+      <div class="dark-overlay"></div>
+
+      <nav class="mob-menu">
+        <div class="mob-menu__button-box">
+          <a href="" class="mob-menu__button active">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+        <ul class="mob-menu__box">
+          <li class="mob-menu__item">
+            <a href="#" class="mob-menu__link">home</a>
+          </li>
+          <li class="mob-menu__item mob-menu__has-submenu">
+            <a href="#" class="mob-menu__link mob-menu__is-submenu">menus </a>
+            <ul class="mob-menu__submenu-box">
+              <li class="mob-menu__submenu-item mob-menu__submenu-item_menus">
+                <a href="#" class="mob-menu__submenu-link">menu list 1</a>
+              </li>
+              <li class="mob-menu__submenu-item mob-menu__submenu-item_menus">
+                <a href="#" class="mob-menu__submenu-link">menu list 2</a>
+              </li>
+              <li class="mob-menu__submenu-item mob-menu__submenu-item_menus">
+                <a href="#" class="mob-menu__submenu-link">menu list 3</a>
+              </li>
+              <li class="mob-menu__submenu-item mob-menu__submenu-item_menus">
+                <a href="#" class="mob-menu__submenu-link">menu list 4</a>
+              </li>
+            </ul>
+          </li>
+          <li class="mob-menu__item">
+            <a href="#" class="mob-menu__link">about us</a>
+          </li>
+
+          <li class="mob-menu__item mob-menu__has-submenu">
+            <a href="#" class="mob-menu__link mob-menu__is-submenu">pages</a>
+            <ul class="mob-menu__submenu-box">
+              <li class="mob-menu__submenu-item">
+                <a href="#" class="mob-menu__submenu-link">Dropdown menu 1</a>
+              </li>
+              <li class="mob-menu__submenu-item">
+                <a href="#" class="mob-menu__submenu-link">Dropdown menu 2</a>
+              </li>
+              <li class="mob-menu__submenu-item mob-menu__has-submenu">
+                <a href="#" class="mob-menu__submenu-link mob-menu__is-submenu"
+                  >Dropdown menu 3</a
+                >
+                <ul class="mob-menu__submenu-lv2-box">
+                  <li class="mob-menu__submenu-lv2-item">
+                    <a href="#" class="mob-menu__submenu-lv2-link"
+                      >Dropdown menu level 1</a
+                    >
+                  </li>
+                  <li class="mob-menu__submenu-lv2-item">
+                    <a href="#" class="mob-menu__submenu-lv2-link"
+                      >Dropdown menu level 2</a
+                    >
+                  </li>
+                  <li class="mob-menu__submenu-lv2-item">
+                    <a href="#" class="mob-menu__submenu-lv2-link"
+                      >Dropdown menu level 3</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="mob-menu__submenu-item">
+                <a href="#" class="mob-menu__submenu-link">Dropdown menu 4</a>
+              </li>
+            </ul>
+          </li>
+          <li class="mob-menu__item">
+            <a href="#" class="mob-menu__link">our chefs</a>
+          </li>
+          <li class="mob-menu__item">
+            <a href="#" class="mob-menu__link">contact</a>
+          </li>
+        </ul>
+      </nav>
+      <main>
+        <section class="menu-sections">
+          <div class="menu-sections__header">
+            <div class="menu-sections__subtitle">FLAVORS FOR ROYALTY</div>
+            <div class="menu-sections__divider-box">
+              <img
+                src="i/separator.svg"
+                alt=""
+                class="menu-sections__divider"
+              />
+            </div>
+            <h2 class="menu-sections__title">We Offer Top Notch</h2>
+          </div>
+          <div class="menu-sections__box">
+            <p class="menu-sections__data">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta at
+              perferendis placeat nulla commodi illo explicabo animi beatae
+              aliquam dignissimos? Dolores, eveniet.
+            </p>
+            <div class="menu-sections__item">
+              <a href="#" class="menu-sections__link">
+                <div class="menu-sections__img-box">
+                  <img
+                    src="i/resource/offer-image-1.jpg"
+                    alt="Breackfast"
+                    class="menu-sections__img"
+                  />
+                </div>
+                <h3 class="menu-sections__name">Breakfast</h3>
+                <div class="menu-sections__menu-link">view menu</div>
+              </a>
+            </div>
+            <div class="menu-sections__item">
+              <a href="#" class="menu-sections__link">
+                <div class="menu-sections__img-box">
+                  <img
+                    src="i/resource/offer-image-2.jpg"
+                    alt="Breackfast"
+                    class="menu-sections__img"
+                  />
+                </div>
+                <h3 class="menu-sections__name">Appetizers</h3>
+                <div class="menu-sections__menu-link">view menu</div>
+              </a>
+            </div>
+            <div class="menu-sections__item">
+              <a href="#" class="menu-sections__link">
+                <div class="menu-sections__img-box">
+                  <img
+                    src="i/resource/offer-image-3.jpg"
+                    alt="Breackfast"
+                    class="menu-sections__img"
+                  />
+                </div>
+                <h3 class="menu-sections__name">Drinks</h3>
+                <div class="menu-sections__menu-link">view menu</div>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="menu">
+          <div class="menu__header">
+            <div class="menu__subtitle">SPECIAL SELECTION</div>
+            <div class="menu__divider-box">
+              <img src="i/separator.svg" alt="" class="menu__divider" />
+            </div>
+            <h2 class="menu__title">Delicious Menu</h2>
+          </div>
+          <div class="menu-cats">
+            <ul class="menu-cats__box">
+              <li class="menu-cats__item">
+                <a href="" class="menu-cats__link menu-cats__link-active">
+                  morning
+                </a>
+              </li>
+              <li class="menu-cats__item">
+                <a href="" class="menu-cats__link"> weekday lunch </a>
+              </li>
+              <li class="menu-cats__item">
+                <a href="" class="menu-cats__link"> dinner </a>
+              </li>
+              <li class="menu-cats__item">
+                <a href="" class="menu-cats__link"> wines </a>
+              </li>
+            </ul>
+          </div>
+          <div class="dishes">
+            <ul class="dishes__box">
+              <li class="dishes__item">
+                <div class="dishes__img-box">
+                  <img
+                    src="i/resource/menu-image-5.png"
+                    alt="Greek Salad"
+                    class="dishes__img"
+                  />
+                </div>
+                <div class="dishes__title">greek salad</div>
+                <div class="dishes__price-line"></div>
+                <div class="dishes__price">
+                  $25
+                  <span class="dishes__price-zero">.50</span>
+                </div>
+                <div class="dishes__ingredients">
+                  Tomatoes, green bell pepper, sliced cucumber onion, olives,
+                  and feta cheese.
+                </div>
+              </li>
+              <li class="dishes__item">
+                <div class="dishes__img-box">
+                  <img
+                    src="i/resource/menu-image-6.png"
+                    alt="Greek Salad"
+                    class="dishes__img"
+                  />
+                </div>
+                <div class="dishes__title">lasagne</div>
+                <div class="dishes__price-line"></div>
+                <div class="dishes__price">
+                  $40
+                  <span class="dishes__price-zero">.00</span>
+                </div>
+                <div class="dishes__ingredients">
+                  Vegetables, cheeses, ground meats, tomato sauce, seasonings
+                  and spices
+                </div>
+              </li>
+              <li class="dishes__item">
+                <div class="dishes__img-box">
+                  <img
+                    src="i/resource/menu-image-7.png"
+                    alt="Greek Salad"
+                    class="dishes__img"
+                  />
+                </div>
+                <div class="dishes__title">butternut pumpkin</div>
+                <div class="dishes__price-line"></div>
+                <div class="dishes__price">
+                  $10
+                  <span class="dishes__price-zero">.00</span>
+                </div>
+                <div class="dishes__ingredients">
+                  Typesetting industry lorem Lorem Ipsum is simply dummy text of
+                  the priand.
+                </div>
+              </li>
+              <li class="dishes__item">
+                <div class="dishes__img-box">
+                  <img
+                    src="i/resource/menu-image-8.png"
+                    alt="Greek Salad"
+                    class="dishes__img"
+                  />
+                </div>
+                <div class="dishes__title">tokusen wagyu</div>
+                <div class="dishes__price-line"></div>
+                <div class="dishes__price">
+                  $39
+                  <span class="dishes__price-zero">.50</span>
+                </div>
+                <div class="dishes__ingredients">
+                  Vegetables, cheeses, ground meats, tomato sauce, seasonings
+                  and spices.
+                </div>
+              </li>
+              <li class="dishes__item">
+                <div class="dishes__img-box">
+                  <img
+                    src="i/resource/menu-image-9.png"
+                    alt="Greek Salad"
+                    class="dishes__img"
+                  />
+                </div>
+                <div class="dishes__title">olivas rellenas</div>
+                <div class="dishes__price-line"></div>
+                <div class="dishes__price">
+                  $25
+                  <span class="dishes__price-zero">.00</span>
+                </div>
+                <div class="dishes__ingredients">
+                  Avocados with crab meat, red onion, crab salad stuffed red
+                  bell pepper and green bell pepper.
+                </div>
+              </li>
+              <li class="dishes__item">
+                <div class="dishes__img-box">
+                  <img
+                    src="i/resource/menu-image-10.png"
+                    alt="Greek Salad"
+                    class="dishes__img"
+                  />
+                </div>
+                <div class="dishes__title">opu fish</div>
+                <div class="dishes__price-line"></div>
+                <div class="dishes__price">
+                  $49
+                  <span class="dishes__price-zero">.00</span>
+                </div>
+                <div class="dishes__ingredients">
+                  Vegetables, cheeses, ground meats, tomato sauce, seasonings
+                  and spices.
+                </div>
+              </li>
+            </ul>
+          </div>
+          <p class="menu__data">
+            During winter daily from
+            <span class="menu__data-time">7:00 pm</span> to
+            <span class="menu__data-time">9:00 pm</span>
+          </p>
+          <div class="button">
+            <a class="button__link">
+              <div
+                class="button__text button__text_first button__text_transparent"
+              >
+                view all menu
+              </div>
+              <div
+                class="button__text button__text_second button__text_colored"
+              >
+                view all menu
+              </div>
+            </a>
+          </div>
+        </section>
+        <section class="special-offer">
+          <div class="special-offer__header">
+            <div class="special-offer__subtitle">SPECIAL OFFER</div>
+            <div class="special-offer__divider-box">
+              <img
+                src="i/separator.svg"
+                alt=""
+                class="special-offer__divider"
+              />
+            </div>
+            <h2 class="special-offer__title">Best Specialties</h2>
+          </div>
+          <div class="special-cats">
+            <div id="slider" class="slider special-cats__box">
+              <div class="special-cats__item">
+                <a href="#" class="special-cats__link">
+                  <div class="special-cats__img-box">
+                    <img
+                      src="i/resource/menu-image-12.jpg"
+                      alt="Greek Salad"
+                      class="special-cats__img"
+                    />
+                  </div>
+                  <h3 class="special-cats__name">greek salad</h3>
+                  <p class="special-cats__data">
+                    Tomatoes, green bell pepper, sliced cucumber onion,
+                    olives...
+                  </p>
+                  <div class="special-cats__price">$25.50</div>
+                </a>
+              </div>
+              <div class="special-cats__item">
+                <a href="#" class="special-cats__link">
+                  <div class="special-cats__img-box">
+                    <img
+                      src="i/resource/menu-image-11.jpg"
+                      alt="Greek Salad"
+                      class="special-cats__img"
+                    />
+                  </div>
+                  <h3 class="special-cats__name">tokusen wagyu</h3>
+                  <p class="special-cats__data">
+                    Vegetables, cheeses, ground meats, tomato sauce,
+                    seasonings...
+                  </p>
+                  <div class="special-cats__price">$39.50</div>
+                </a>
+              </div>
+              <div class="special-cats__item">
+                <a href="#" class="special-cats__link">
+                  <div class="special-cats__img-box">
+                    <img
+                      src="i/resource/menu-image-14.jpg"
+                      alt="Greek Salad"
+                      class="special-cats__img"
+                    />
+                  </div>
+                  <h3 class="special-cats__name">opu fish</h3>
+                  <p class="special-cats__data">
+                    Vegetables, cheeses, ground meats, tomato sauce,
+                    seasonings...
+                  </p>
+                  <div class="special-cats__price">$12.50</div>
+                </a>
+              </div>
+              <div class="special-cats__item">
+                <a href="#" class="special-cats__link">
+                  <div class="special-cats__img-box">
+                    <img
+                      src="i/resource/menu-image-13.jpg"
+                      alt="Greek Salad"
+                      class="special-cats__img"
+                    />
+                  </div>
+                  <h3 class="special-cats__name">butternut pumpkin</h3>
+                  <p class="special-cats__data">
+                    Avocados with crab meat, red onion, crab salad stuffed red
+                    bell pepper...
+                  </p>
+                  <div class="special-cats__price">$15.00</div>
+                </a>
+              </div>
+              <div class="special-cats__item">
+                <a href="#" class="special-cats__link">
+                  <div class="special-cats__img-box">
+                    <img
+                      src="i/resource/menu-image-14.jpg"
+                      alt="Greek Salad"
+                      class="special-cats__img"
+                    />
+                  </div>
+                  <h3 class="special-cats__name">opu fish</h3>
+                  <p class="special-cats__data">
+                    Vegetables, cheeses, ground meats, tomato sauce,
+                    seasonings...
+                  </p>
+                  <div class="special-cats__price">$12.50</div>
+                </a>
+              </div>
+            </ul>
+          </div>
+          <div class="button">
+            <a class="button__link">
+              <div
+                class="button__text button__text_first button__text_transparent"
+              >
+                view all menu
+              </div>
+              <div
+                class="button__text button__text_second button__text_colored"
+              >
+                view all menu
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section class="strength">
+          <div class="strength__header">
+            <div class="strength__subtitle">WHY CHOOSE US</div>
+            <div class="strength__divider-box">
+              <img src="i/separator.svg" alt="" class="strength__divider" />
+            </div>
+            <h2 class="strength__title">Our Strength</h2>
+          </div>
+          <div class="strength-cats">
+            <ul class="strength-cats__box">
+              <li class="strength-cats__item">
+                <div class="strength-cats__img-box">
+                  <img
+                    src="i/resource/why-icon-1.png"
+                    alt="Hygienic Food"
+                    class="strength-cats__img"
+                  />
+                </div>
+                <h3 class="strength-cats__name">Hygienic Food</h3>
+                <p class="strength-cats__data">
+                  Lorem Ipsum is simply dummy printing and typesetting.
+                </p>
+              </li>
+              <li class="strength-cats__item">
+                <div class="strength-cats__img-box">
+                  <img
+                    src="i/resource/why-icon-2.png"
+                    alt="Hygienic Food"
+                    class="strength-cats__img"
+                  />
+                </div>
+                <h3 class="strength-cats__name">Fresh Environment</h3>
+                <p class="strength-cats__data">
+                  Lorem Ipsum is simply dummy printing and typesetting.
+                </p>
+              </li>
+              <li class="strength-cats__item">
+                <div class="strength-cats__img-box">
+                  <img
+                    src="i/resource/why-icon-3.png"
+                    alt="Hygienic Food"
+                    class="strength-cats__img"
+                  />
+                </div>
+                <h3 class="strength-cats__name">Skilled Chefs</h3>
+                <p class="strength-cats__data">
+                  Lorem Ipsum is simply dummy printing and typesetting.
+                </p>
+              </li>
+              <li class="strength-cats__item">
+                <div class="strength-cats__img-box">
+                  <img
+                    src="i/resource/why-icon-4.png"
+                    alt="Hygienic Food"
+                    class="strength-cats__img"
+                  />
+                </div>
+                <h3 class="strength-cats__name">Event & Party</h3>
+                <p class="strength-cats__data">
+                  Lorem Ipsum is simply dummy printing and typesetting.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <aside class="reservation">
+          <div class="reservation__wrap">
+            <article class="reservation__box">
+              <h2 class="reservation__title">Online Reservation</h2>
+              <p class="reservation__info">
+                Booking request
+                <span class="reservation__phone">+88-123-123456</span> or fill
+                out the order form
+              </p>
+              <form action="" class="reservation__form">
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  class="reservation__input reservation__input_name"
+                />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  class="reservation__input reservation__input_email"
+                />
+                <select
+                  name=""
+                  id=""
+                  class="reservation__select reservation__select_people"
+                >
+                  <option value="1" class="reservation__option">
+                    1 Person
+                  </option>
+                  <option value="2" class="reservation__option">
+                    2 Person
+                  </option>
+                  <option value="3" class="reservation__option">
+                    3 Person
+                  </option>
+                  <option value="4" class="reservation__option">
+                    4 Person
+                  </option>
+                  <option value="5" class="reservation__option">
+                    5 Person
+                  </option>
+                  <option value="6" class="reservation__option">
+                    6 Person
+                  </option>
+                  <option value="7" class="reservation__option">
+                    7 Person
+                  </option>
+                  <option value="8" class="reservation__option">
+                    8 Person
+                  </option>
+                </select>
+                <input
+                  type="date"
+                  class="reservation__input reservation__input_date"
+                />
+                <select
+                  name=""
+                  id=""
+                  class="reservation__select reservation__select_time"
+                >
+                  <option value="11" class="reservation__option">
+                    11:00 am
+                  </option>
+                  <option value="12" class="reservation__option">
+                    11:00 am
+                  </option>
+                  <option value="13" class="reservation__option">
+                    13:00 pm
+                  </option>
+                  <option value="14" class="reservation__option">
+                    14:00 pm
+                  </option>
+                  <option value="15" class="reservation__option">
+                    15:00 pm
+                  </option>
+                  <option value="16" class="reservation__option">
+                    16:00 pm
+                  </option>
+                  <option value="17" class="reservation__option">
+                    17:00 pm
+                  </option>
+                  <option value="18" class="reservation__option">
+                    18:00 pm
+                  </option>
+                  <option value="19" class="reservation__option">
+                    19:00 pm
+                  </option>
+                  <option value="20" class="reservation__option">
+                    20:00 pm
+                  </option>
+                  <option value="21" class="reservation__option">
+                    21:00 pm
+                  </option>
+                </select>
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Message"
+                  class="reservation__input reservation__input_message"
+                ></textarea>
+                <button class="button reservation__submit" type="submit">
+                  <a class="button__link">
+                    <div
+                      class="button__text button__text_first button__text_colored"
+                    >
+                      Book a table
+                    </div>
+                    <div
+                      class="button__text button__text_second button__text_transparent reservation__submit"
+                    >
+                      Book a table
+                    </div>
+                  </a>
+                </button>
+              </form>
+            </article>
+            <article class="contacts">
+              <h2 class="contacts__title">Contact Us</h2>
+              <h3 class="contacts__subtitle">Booking request</h3>
+              <div class="contacts__phone">+88-123-123456</div>
+              <div class="contacts__info-name">location</div>
+              <div class="contacts__info">
+                Restaurant St, Delicious City, London 9578, UK
+              </div>
+              <div class="contacts__info-name">Lunch Time</div>
+              <div class="contacts__info">
+                Monday to Sunday 11.00 am - 2.30pm
+              </div>
+              <div class="contacts__info-name">Dinner Time</div>
+              <div class="contacts__info">
+                Monday to Sunday 05.00 pm - 10.00pm
+              </div>
+            </article>
+          </div>
+        </aside>
+        <section class="team">
+          <div class="team__header">
+            <div class="team__subtitle">EXPERIENCED TEAM</div>
+            <div class="team__divider-box">
+              <img src="i/separator.svg" alt="" class="team__divider" />
+            </div>
+            <h2 class="team__title">Meet Our Chef</h2>
+          </div>
+          <div class="chefs">
+            <ul class="chefs__items-box">
+              <li class="chefs__item">
+                <div class="chefs__img-box">
+                  <img
+                    src="i/resource/team-1.jpg"
+                    alt="Willium Joe"
+                    class="chefs__img"
+                  />
+                  <div class="chefs-contacts">
+                    <ul class="chefs-contacts__box">
+                      <li class="chefs-contacts__item">
+                        <a href="" class="chefs-contacts__link">
+                          <i
+                            class="chefs-contacts__icon fa-brands fa-twitter"
+                          ></i>
+                        </a>
+                      </li>
+                      <li class="chefs-contacts__item">
+                        <a href="" class="chefs-contacts__link">
+                          <i
+                            class="chefs-contacts__icon chefs-contacts__icon_fb fa-brands fa-facebook-f"
+                          ></i>
+                        </a>
+                      </li>
+                      <li class="chefs-contacts__item">
+                        <a href="" class="chefs-contacts__link">
+                          <i
+                            class="chefs-contacts__icon fa-brands fa-instagram"
+                          ></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <h3 class="chefs__name">Willium Joe</h3>
+                <div class="chefs__position">MASTER CHEF</div>
+                <p class="chefs__data">
+                  Lorem Ipsum is simply dummy printing and typeset industry
+                  lorem Ipsum has been the industrys.
+                </p>
+              </li>
+              <li class="chefs__item">
+                <div class="chefs__img-box">
+                  <img
+                    src="i/resource/team-2.jpg"
+                    alt="Steave Den"
+                    class="chefs__img"
+                  />
+                  <div class="chefs-contacts">
+                    <ul class="chefs-contacts__box">
+                      <li class="chefs-contacts__item">
+                        <a href="" class="chefs-contacts__link">
+                          <i
+                            class="chefs-contacts__icon fa-brands fa-twitter"
+                          ></i>
+                        </a>
+                      </li>
+                      <li class="chefs-contacts__item">
+                        <a href="" class="chefs-contacts__link">
+                          <i
+                            class="chefs-contacts__icon chefs-contacts__icon_fb fa-brands fa-facebook-f"
+                          ></i>
+                        </a>
+                      </li>
+                      <li class="chefs-contacts__item">
+                        <a href="" class="chefs-contacts__link">
+                          <i
+                            class="chefs-contacts__icon fa-brands fa-instagram"
+                          ></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <h3 class="chefs__name">Steave Den</h3>
+                <div class="chefs__position">MASTER CHEF</div>
+                <p class="chefs__data">
+                  Lorem Ipsum is simply dummy printing and typeset industry
+                  lorem Ipsum has been the industrys.
+                </p>
+              </li>
+              <li class="chefs__item">
+                <div class="chefs__img-box">
+                  <img
+                    src="i/resource/team-3.jpg"
+                    alt="Lily Sopy"
+                    class="chefs__img"
+                  />
+                  <div class="chefs-contacts">
+                    <ul class="chefs-contacts__box">
+                      <li class="chefs-contacts__item">
+                        <a href="" class="chefs-contacts__link">
+                          <i
+                            class="chefs-contacts__icon fa-brands fa-twitter"
+                          ></i>
+                        </a>
+                      </li>
+                      <li class="chefs-contacts__item">
+                        <a href="" class="chefs-contacts__link">
+                          <i
+                            class="chefs-contacts__icon chefs-contacts__icon_fb fa-brands fa-facebook-f"
+                          ></i>
+                        </a>
+                      </li>
+                      <li class="chefs-contacts__item">
+                        <a href="" class="chefs-contacts__link">
+                          <i
+                            class="chefs-contacts__icon fa-brands fa-instagram"
+                          ></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <h3 class="chefs__name">Lily Sopy</h3>
+                <div class="chefs__position">MASTER CHEF</div>
+                <p class="chefs__data">
+                  Lorem Ipsum is simply dummy printing and typeset industry
+                  lorem Ipsum has been the industrys.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__main-links">
+          <ul class="footer__link-box">
+            <li class="footer__item">
+              <a href="#" class="footer__link">HOME</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">MENUS</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">ABOUT US</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">OUR CHEFS</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__contact-links">
+          <ul class="footer__link-box">
+            <li class="footer__item">
+              <a href="#" class="footer__link">FACEBOOK</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">INSTAGRAM</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">TWITTER</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">YOUTUBE</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">GOOGLE MAP</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-main">
+          <div class="footer-main__logo-box">
+            <img src="i/resource/logo.png" alt="" class="footer-main__logo" />
+          </div>
+          <div class="footer-main__info">
+            <p class="footer-main__adress">
+              Restaurant St, Delicious City, London 9578, UK
+            </p>
+            <a href="mailto:booking@domainname.com" class="footer-main__email"
+              >booking@domainname.com
+            </a>
+            <div class="footer-main__booking">
+              Booking Request : +88-123-123456
+            </div>
+            <p class="footer-main__working-hours">Open : 09:00 am - 01:00 pm</p>
+          </div>
+          <div class="footer-subscription">
+            <div class="footer-subscription__separator">
+              <span class="footer-subscription__separator-item"></span>
+              <span class="footer-subscription__separator-item"></span>
+              <span class="footer-subscription__separator-item"></span>
+            </div>
+            <h2 class="footer-subscription__title">Get News & Offers</h2>
+            <p class="footer-subscription__text">
+              Subscribe us & Get
+              <span class="footer-subscription__text-highlighted">
+                25% Off.</span
+              >
+            </p>
+            <form class="footer-subscription__form">
+              <input
+                type="text"
+                placeholder="Email"
+                class="footer-subscription__input footer-subscription__input_text"
+              />
+              <button class="button reservation__submit" type="submit">
+                <a class="button__link">
+                  <div
+                    class="button__text button__text_first button__text_colored footer-subscription__input_submit"
+                  >
+                    Subscribe
+                  </div>
+                  <div
+                    class="button__text button__text_second button__text_transparent footer-subscription__input_submit"
+                  >
+                    Subscribe
+                  </div>
+                </a>
+              </button>
+            </form>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <!--  JavaScript here -->
-    <!-- <script src="js/app.js"></script> -->
+    <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/app.js"></script>
+
   </body>
 </html>

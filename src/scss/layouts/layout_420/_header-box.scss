@@ -1,0 +1,16 @@
+.header_contacts {
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 10px;
+  @include e(phone) {
+    font-family: $baseFontFamily;
+    font-size: 14px;
+    color: $white;
+    padding: 10px 0;
+  }
+  @include e(email) {
+    align-self: center;
+    font-family: $baseFontFamily;
+    font-size: 14px;
+    color: $white;
+  }
+}

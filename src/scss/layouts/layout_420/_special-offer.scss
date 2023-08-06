@@ -1,0 +1,6 @@
+.special-cats {
+  padding: 0 70px;
+  @include e(arrow) {
+    top: 30%;
+  }
+}

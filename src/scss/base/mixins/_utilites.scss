@@ -67,3 +67,51 @@
   $prefix: if(variable-exists(prefix), #{$prefix}, "");
   #{$cssProp}: var(--#{$prefix}#{$cssVar});
 }
+
+@mixin before($img, $w, $h) {
+  &::before {
+    content: "";
+    background: url(#{$i}#{$img}) no-repeat;
+    display: block;
+    position: absolute;
+    width: #{$w};
+    height: #{$h};
+    @content;
+  }
+}
+
+%title {
+  color: $white;
+  font-family: $secondaryFontFamily;
+  font-weight: 400;
+  font-size: rem(35px);
+  margin: 30px auto;
+  max-width: 450px;
+}
+
+%divider {
+  padding-top: 16px;
+  max-width: 100px;
+}
+%subtitle {
+  color: $mainColor;
+  font-size: 12px;
+  font-family: $baseFontFamily;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+%button {
+  border: 2px solid $mainColor;
+  background: transparent;
+  color: $mainColor;
+  display: inline-block;
+  font-size: rem(12px);
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin: 0 auto;
+  padding: 14px 18px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}

@@ -1,0 +1,83 @@
+.main-menu {
+  @include e(item) {
+    position: relative;
+    &:hover .main-menu__link::before {
+      transform: scaleX(0.5);
+      transition: all 0.3s ease;
+    }
+    &:hover .main-menu__link {
+      color: $mainColor;
+    }
+  }
+  @include e(link) {
+    transition: all 0.3s ease;
+    &:hover {
+      color: $mainColor;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      width: 100%;
+      height: 5px;
+      border-top: 1px solid $mainColor;
+      border-bottom: 1px solid $mainColor;
+      z-index: 1;
+      transform: scaleX(0);
+    }
+  }
+  @include e(submenu-item) {
+    position: relative;
+    &:hover .main-menu__submenu-lv2-box {
+      visibility: visible;
+    }
+    &:hover .main-menu__submenu-link::before {
+      visibility: visible;
+    }
+    &:hover .main-menu__submenu-link {
+      color: $mainColor;
+      padding-left: 20px;
+    }
+  }
+  @include e(submenu-link) {
+    transition: all 0.2s ease-in-out;
+    &::before {
+      content: "";
+      left: 20px;
+      top: 20px;
+      position: absolute;
+      height: 8px;
+      width: 8px;
+      border: 1px solid $mainColor;
+      transform: rotate(45deg);
+      visibility: hidden;
+      transition: all 0.6s ease;
+    }
+  }
+  @include e(submenu-lv2-item) {
+    position: relative;
+    &:hover .main-menu__submenu-lv2-link::before {
+      visibility: visible;
+    }
+    &:hover .main-menu__submenu-lv2-link {
+      color: $mainColor;
+      padding-left: 20px;
+    }
+  }
+  @include e(submenu-lv2-link) {
+    transition: all 0.2s ease-in-out;
+    &::before {
+      content: "";
+      left: 20px;
+      top: 20px;
+      position: absolute;
+      height: 8px;
+      width: 8px;
+      border: 1px solid $mainColor;
+      transform: rotate(45deg);
+      visibility: hidden;
+      transition: all 0.6s ease;
+    }
+  }
+}

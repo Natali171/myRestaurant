@@ -1,0 +1,35 @@
+.reservation {
+  display: block;
+
+  @include e(form) {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 10px;
+  }
+  @include e(input) {
+    @include m(name) {
+      grid-column: span 3;
+    }
+    grid-column: span 3;
+    @include m(email) {
+      grid-column: span 3;
+    }
+    @include m(date) {
+      grid-column: span 2;
+    }
+    @include m(message) {
+      grid-column: span 6;
+    }
+  }
+  @include e(select) {
+    @include m(people) {
+      grid-column: span 2;
+    }
+    @include m(time) {
+      grid-column: span 2;
+    }
+  }
+  @include e(submit) {
+    grid-column: span 6;
+  }
+}

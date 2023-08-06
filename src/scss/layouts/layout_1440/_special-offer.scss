@@ -1,0 +1,8 @@
+.special-cats {
+  @include e(box) {
+    grid-template-columns: repeat(4, 1fr);
+    & li:nth-of-type(4) {
+      display: block;
+    }
+  }
+}

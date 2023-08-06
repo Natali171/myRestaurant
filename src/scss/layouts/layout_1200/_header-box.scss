@@ -1,0 +1,60 @@
+.button {
+  @include e(link) {
+    transition: all 1s ease;
+
+    &:hover .button__text_first {
+      opacity: 0;
+    }
+    &:hover .button__text_second {
+      transform: translateY(-54px);
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  @include e(text) {
+    padding: 14px 45px;
+
+    @include m(first) {
+      transition: all 0.5s ease;
+    }
+    @include m(second) {
+      transition: all 0.7s ease;
+    }
+  }
+}
+
+.header_contacts {
+  @include e(adress) {
+  }
+  @include e(working-hours) {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 20px;
+      top: 4px;
+      height: 8px;
+      width: 8px;
+      border: 1px solid $mainColor;
+      transform: rotate(45deg);
+    }
+  }
+  @include e(phone) {
+  }
+  @include e(email) {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 20px;
+      top: 4px;
+      height: 8px;
+      width: 8px;
+      border: 1px solid $mainColor;
+      transform: rotate(45deg);
+    }
+  }
+}
