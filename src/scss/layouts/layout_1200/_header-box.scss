@@ -1,4 +1,30 @@
+.header {
+  overflow: hidden;
+  @include e(animate) {
+    background-size: 130%;
+  }
+  @include e(arrow) {
+    &:hover {
+      background-color: $mainColor;
+      border-color: transparent;
+      color: $black;
+      cursor: pointer;
+    }
+  }
+}
+.heading {
+  @include e(item-box) {
+    position: relative;
+    width: 100%;
+    z-index: 200;
+    left: 0;
+    right: 0;
+    margin: 170px auto 90px;
+  }
+}
+
 .button {
+  margin-bottom: 36px;
   @include e(link) {
     transition: all 1s ease;
 

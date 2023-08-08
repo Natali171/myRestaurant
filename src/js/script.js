@@ -39,15 +39,35 @@ function resetMobileMenu() {
     .hide();
 }
 
+// ================================================================================================================
+
+const menu = document.querySelector(".header__fixed-box");
+let k;
+
+function fixMenu() {
+  menu.getBoundingClientRect().top + k < window.pageYOffset &&
+    menu.classList.add("header__fixed");
+  menu.getBoundingClientRect().top + k > window.pageYOffset &&
+    menu.classList.remove("header__fixed");
+}
+function handleScroll() {
+  fixMenu();
+}
+
+window.addEventListener("scroll", handleScroll);
+
 function initMobile() {
+  k = 80;
   console.log("is-mobile");
 }
 
 function initTablet() {
+  k = 100;
   console.log("is-tablet");
 }
 
 function initDesktop() {
+  k = 140;
   console.log("is-desktop");
 }
 

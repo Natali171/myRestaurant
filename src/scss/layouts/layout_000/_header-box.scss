@@ -1,12 +1,31 @@
 .header {
-  background-image: url("#{$i}main-slider/slider-1.jpg");
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  grid-gap: 10px;
-  padding: 16px 10px;
   position: relative;
   margin: 0 -16px;
   text-align: center;
+  @include e(static-box) {
+    padding-top: 20px;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  @include e(fixed-box) {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 10px;
+    width: 100%;
+    padding: 10px 20px 4px;
+    transition: all 1.6s ease;
+  }
+  @include e(fixed) {
+    background-color: rgb(6, 12, 0);
+    top: 0;
+    position: fixed;
+    padding: 10px 20px;
+  }
+
   @include e(logo-box) {
   }
   @include e(logo) {
@@ -23,7 +42,7 @@
     line-height: 42px;
     position: absolute;
     text-align: center;
-    top: 60%;
+    top: 50%;
     width: 44px;
     @include m(left) {
       left: 2%;
@@ -39,7 +58,6 @@
   }
 
   @include e(menu-button) {
-    
     & span {
       &:nth-child(1) {
         top: 0;
@@ -85,23 +103,42 @@
 }
 
 .heading {
-  margin: 0 auto;
-  display: grid;
-  grid-row: 5;
-  grid-column: span 4;
-  text-align: center;
+  max-width: 100%;
+
+  @include e(item) {
+    &:nth-of-type(1) {
+      background: no-repeat url("#{$i}main-slider/slider-1.jpg");
+    }
+    &:nth-of-type(2) {
+      background: no-repeat url("#{$i}main-slider/slider-2.jpg");
+    }
+    &:nth-of-type(3) {
+      background: no-repeat url("#{$i}main-slider/slider-3.jpg");
+    }
+  }
+  @include e(item-box) {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 170px auto 0;
+  }
   @include e(subtitle) {
     @extend %subtitle;
-    grid-row: 1;
+    order: -2;
   }
   @include e(divider) {
     @extend %divider;
-    grid-row: 2;
+    margin: 0 auto;
+  }
+  @include e(divider-box) {
+    width: 100%;
+    align-self: center;
+    order: -1;
   }
   @include e(title) {
     @extend %title;
-    grid-row: 3;
-    max-width: 400px;
+    max-width: 300px;
   }
   @include e(data) {
     color: $white;
@@ -109,10 +146,11 @@
     font-weight: 300;
     font-size: rem(20px);
     line-height: 32px;
+    padding: 0 14px;
   }
-  @include e(button-box) {
+  @include e(button) {
     text-align: center;
-    margin: 35px auto;
+    margin: 40px auto 100px;
   }
   @include e(button-link) {
     @extend %button;
@@ -121,8 +159,8 @@
 
 .button {
   overflow: hidden;
-  margin: auto;
   width: max-content;
+  margin-inline: auto;
   align-self: center;
   @include e(link) {
     display: block;

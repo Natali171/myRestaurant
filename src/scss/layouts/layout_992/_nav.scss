@@ -1,4 +1,5 @@
 .main-menu {
+  display: block;
   margin-top: 28px;
   @include e(burger-icon-box) {
     display: none;
@@ -24,6 +25,7 @@
     text-transform: uppercase;
   }
   @include e(submenu-box) {
+    margin-top: 20px;
     background-color: rgb(23, 23, 23);
     padding: 0;
     position: absolute;

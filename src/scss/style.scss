@@ -2,6 +2,8 @@
 
 @import "layouts/layout_000/index";
 
+@import "vendor/index";
+
 @media only screen and (min-width: 420px) {
   @import "layouts/layout_420/index";
 }
