@@ -33,34 +33,43 @@ $("#slider").slick({
   ],
 });
 
+let des;
+
 function animateHeader() {
   const bg = document.querySelector(".slick-current");
   const text = document.querySelector(".slick-current .heading__item-box");
-  bg.style.backgroundSize = `134%`;
-  text.style.opacity = 0.1;
+  text.style.opacity = 0;
+  bg.style.opacity = 0;
   text.style.top = `100px`;
-  const changeBgSize = setInterval(() => {
-    bg.style.backgroundSize = `${parseFloat(bg.style.backgroundSize) + 0.03}%`;
-    parseFloat(bg.style.backgroundSize) > 200 && clearInterval(changeBgSize);
-  }, 10);
-  const moveText = setInterval(() => {
-    text.style.top = `${parseFloat(text.style.top) - 0.5}px`;
-    parseFloat(text.style.top) < 50 && clearInterval(moveText);
-  }, 1);
-  const changeTextOp = setInterval(() => {
-    let val = parseFloat(text.style.opacity);
-    if (val < 1) {
-      val += 0.003;
-      text.style.opacity = val;
-      return;
-    }
-    console.log(text.style.opacity);
-    clearInterval(changeTextOp);
-  }, 1);
+
+  if (des) {
+    bg.style.backgroundSize = `130%`;
+    const changeBgSize = setInterval(() => {
+      bg.style.backgroundSize = `${
+        parseFloat(bg.style.backgroundSize) + 0.03
+      }%`;
+      parseFloat(bg.style.backgroundSize) > 200 && clearInterval(changeBgSize);
+    }, 10);
+  }
+  setTimeout(() => {
+    const moveText = setInterval(() => {
+      text.style.top = `${parseFloat(text.style.top) - 0.5}px`;
+      parseFloat(text.style.top) < 50 && clearInterval(moveText);
+    }, 1);
+    const changeTextOp = setInterval(() => {
+      let val = parseFloat(text.style.opacity);
+      if (val < 1) {
+        val += 0.003;
+        text.style.opacity = val;
+        return;
+      }
+      clearInterval(changeTextOp);
+    }, 1);
+  }, 600);
+  return;
 }
 $(".heading")
   .slick({
-    dots: false,
     autoplay: true,
     autoplaySpeed: 6000,
     speed: 1,

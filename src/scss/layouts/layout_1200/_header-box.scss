@@ -19,7 +19,11 @@
     z-index: 200;
     left: 0;
     right: 0;
-    margin: 170px auto 90px;
+    margin: 150px auto 80px;
+  }
+  @include e(title) {
+    font-size: 90px;
+    max-width: 700px;
   }
 }
 

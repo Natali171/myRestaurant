@@ -43,7 +43,6 @@ function resetMobileMenu() {
 
 const menu = document.querySelector(".header__fixed-box");
 let k;
-
 function fixMenu() {
   menu.getBoundingClientRect().top + k < window.pageYOffset &&
     menu.classList.add("header__fixed");
@@ -57,16 +56,20 @@ function handleScroll() {
 window.addEventListener("scroll", handleScroll);
 
 function initMobile() {
+  des = false;
   k = 80;
   console.log("is-mobile");
 }
 
 function initTablet() {
+  des = true;
   k = 100;
   console.log("is-tablet");
 }
 
 function initDesktop() {
+  des = true;
+  animateHeader();
   k = 140;
   console.log("is-desktop");
 }

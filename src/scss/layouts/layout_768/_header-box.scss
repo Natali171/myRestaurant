@@ -3,6 +3,7 @@
     font-size: 14px;
   }
   @include e(title) {
-    font-size: 45px;
+    font-size: 70px;
+    max-width: 520px;
   }
 }
