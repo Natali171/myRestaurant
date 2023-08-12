@@ -32,9 +32,7 @@ $("#slider").slick({
     },
   ],
 });
-
 let des;
-
 function animateHeader() {
   const bg = document.querySelector(".slick-current");
   const text = document.querySelector(".slick-current .heading__item-box");

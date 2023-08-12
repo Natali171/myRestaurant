@@ -4,6 +4,11 @@
   }
   @include e(box) {
   }
+  @include e(input) {
+    &:hover {
+      border-color: $mainColor;
+    }
+  }
 }
 .contacts {
 }

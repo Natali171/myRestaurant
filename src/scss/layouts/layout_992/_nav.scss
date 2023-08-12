@@ -1,6 +1,6 @@
 .main-menu {
   display: block;
-  margin-top: 28px;
+
   @include e(burger-icon-box) {
     display: none;
   }

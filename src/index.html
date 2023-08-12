@@ -11,6 +11,7 @@
     ></script>
   </head>
   <body>
+    <div style="background-color: aliceblue"></div>
     <div class="container">
       <header class="header">
         <div class="heading">
@@ -94,6 +95,12 @@
           </div>
         </div>
         <div class="header__arrows"></div>
+        <div class="book">
+          <a href="" class="book__link">
+            <img src="i/resource/book-icon-1.png" alt="" class="book__img" />
+            <div class="book__text">book a table</div>
+          </a>
+        </div>
         <div class="header__static-box">
           <div class="header_contacts">
             <div class="header_contacts__adress">
@@ -537,6 +544,267 @@
             </a>
           </div>
         </section>
+        <section class="recomendation">
+          <form action="" class="recomendation__form">
+            <div class="recomendation__form-group">
+              <lable class="recomendation__lable" for="type"
+                >Select the type of dish</lable
+              >
+              <select
+                name="type"
+                id="type"
+                class="recomendation__select recomendation__select_type"
+              >
+                <option value="" class="recomendation__option">- - - -</option>
+                <option value="maincourse" class="recomendation__option">
+                  main course
+                </option>
+                <option value="sidedish" class="recomendation__option">
+                  side dish
+                </option>
+                <option value="dessert" class="recomendation__option">
+                  dessert
+                </option>
+                <option value="appetizer" class="recomendation__option">
+                  appetizer
+                </option>
+                <option value="salad" class="recomendation__option">
+                  salad
+                </option>
+                <option value="bread" class="recomendation__option">
+                  bread
+                </option>
+                <option value="breakfast" class="recomendation__option">
+                  breakfast
+                </option>
+                <option value="soup" class="recomendation__option">soup</option>
+                <option value="beverage" class="recomendation__option">
+                  beverage
+                </option>
+                <option value="sauce" class="recomendation__option">
+                  sauce
+                </option>
+                <option value="marinade" class="recomendation__option">
+                  marinade
+                </option>
+                <option value="fingerfood" class="recomendation__option">
+                  fingerfood
+                </option>
+                <option value="snack" class="recomendation__option">
+                  snack
+                </option>
+                <option value="drink" class="recomendation__option">
+                  drink
+                </option>
+              </select>
+            </div>
+            <div class="recomendation__form-group">
+              <lable class="recomendation__lable" for="maxReadyTime"
+                >The maximum time in minutes it should take to prepare and cook
+                the dish</lable
+              >
+              <input
+                name="maxReadyTime"
+                id="maxReadyTime"
+                type="text"
+                placeholder="Сooking time"
+                class="recomendation__input recomendation__input_time"
+              />
+            </div>
+            <div class="recomendation__form-group">
+              <lable class="recomendation__lable" for="cuisine"
+                >What kind of cuisine you prefer</lable
+              >
+              <select
+                name="cuisine"
+                id="cuisine"
+                class="recomendation__select recomendation__select_cuisine"
+              >
+                <option value="" class="recomendation__option">- - - -</option>
+                <option value="asian" class="recomendation__option">
+                  Asian
+                </option>
+                <option value="chinese" class="recomendation__option">
+                  Chinese
+                </option>
+                <option value="european" class="recomendation__option">
+                  European
+                </option>
+                <option value="italian" class="recomendation__option">
+                  Italian
+                </option>
+                <option value="french" class="recomendation__option">
+                  French
+                </option>
+                <option value="german" class="recomendation__option">
+                  German
+                </option>
+                <option value="greek" class="recomendation__option">
+                  Greek
+                </option>
+                <option value="italian" class="recomendation__option">
+                  Italian
+                </option>
+                <option value="japanese" class="recomendation__option">
+                  Japanese
+                </option>
+                <option value="jewish" class="recomendation__option">
+                  Jewish
+                </option>
+                <option value="mediterranean" class="recomendation__option">
+                  Mediterranean
+                </option>
+                <option value="mexican" class="recomendation__option">
+                  Mexican
+                </option>
+                <option value="spanish" class="recomendation__option">
+                  Spanish
+                </option>
+              </select>
+            </div>
+            <div class="recomendation__form-group">
+              <lable class="recomendation__lable" for="excludeCuisine"
+                >Select the cuisine the recipes must not match.</lable
+              >
+              <select
+                name="excludeCuisine"
+                id="excludeCuisine"
+                class="recomendation__select recomendation__select_excludeCuisine"
+              >
+                <option value="" class="recomendation__option">- - - -</option>
+                <option value="asian" class="recomendation__option">
+                  Asian
+                </option>
+                <option value="chinese" class="recomendation__option">
+                  Chinese
+                </option>
+                <option value="european" class="recomendation__option">
+                  European
+                </option>
+                <option value="italian" class="recomendation__option">
+                  Italian
+                </option>
+                <option value="french" class="recomendation__option">
+                  French
+                </option>
+                <option value="german" class="recomendation__option">
+                  German
+                </option>
+                <option value="greek" class="recomendation__option">
+                  Greek
+                </option>
+                <option value="italian" class="recomendation__option">
+                  Italian
+                </option>
+                <option value="japanese" class="recomendation__option">
+                  Japanese
+                </option>
+                <option value="jewish" class="recomendation__option">
+                  Jewish
+                </option>
+                <option value="mediterranean" class="recomendation__option">
+                  Mediterranean
+                </option>
+                <option value="mexican" class="recomendation__option">
+                  Mexican
+                </option>
+                <option value="spanish" class="recomendation__option">
+                  Spanish
+                </option>
+              </select>
+            </div>
+
+            <div class="recomendation__form-group">
+              <lable class="recomendation__lable" for="diet"
+                >Select the diet for which the dish must be suitable</lable
+              >
+              <select
+                name="diet"
+                id="diet"
+                class="recomendation__select recomendation__select_diet"
+              >
+                <option value="" class="recomendation__option">- - - -</option>
+                <option value="Gluten Free" class="recomendation__option">
+                  Gluten Free
+                </option>
+                <option value="Ketogenic" class="recomendation__option">
+                  Ketogenic
+                </option>
+                <option value="Vegetarian" class="recomendation__option">
+                  Vegetarian
+                </option>
+                <option value="Lacto-Vegetarian" class="recomendation__option">
+                  Lacto-Vegetarian
+                </option>
+                <option value="Ovo-Vegetarian" class="recomendation__option">
+                  Ovo-Vegetarian
+                </option>
+                <option value="Vegan" class="recomendation__option">
+                  Vegan
+                </option>
+                <option value="Pescetarian" class="recomendation__option">
+                  Pescetarian
+                </option>
+                <option value="Paleo" class="recomendation__option">
+                  Paleo
+                </option>
+                <option value="Primal" class="recomendation__option">
+                  Primal
+                </option>
+                <option value="Low FODMAP" class="recomendation__option">
+                  Low FODMAP
+                </option>
+                <option value="Whole30" class="recomendation__option">
+                  Whole30
+                </option>
+              </select>
+            </div>
+            <button class="button recomendation__submit" type="submit">
+              <a class="button__link" id="recomendationBtn">
+                <div
+                  class="button__text button__text_first button__text_colored"
+                  id="recomendationBtn"
+                >
+                  Get recommendations
+                </div>
+                <div
+                  class="button__text button__text_second button__text_transparent recomendation__submit"
+                  id="recomendationBtn"
+                >
+                  Get recommendations
+                </div>
+              </a>
+            </button>
+          </form>
+          <div class="dishes-offered">
+            <ul class="dishes-offered__box">
+              <li class="dishes-offered__item">
+                <div class="dishes-offered__img-box">
+                  <img src="" alt="" class="dishes-offered__img" />
+                </div>
+                <div class="dishes-offered__name"></div>
+              </li>
+              <li class="dishes-offered__item">
+                <div class="dishes-offered__img-box">
+                  <img src="" alt="" class="dishes-offered__img" />
+                </div>
+                <div class="dishes-offered__name"></div>
+              </li>
+              <li class="dishes-offered__item">
+                <div class="dishes-offered__img-box">
+                  <img src="" alt="" class="dishes-offered__img" />
+                </div>
+                <div class="dishes-offered__name"></div>
+              </li>
+              <li class="dishes-offered__item">
+                <div class="dishes-offered__img-box">
+                  <img src="" alt="" class="dishes-offered__img" />
+                </div>
+                <div class="dishes-offered__name"></div>
+              </li>
+            </ul>
+          </div>
+        </section>
         <section class="special-offer">
           <div class="special-offer__header">
             <div class="special-offer__subtitle">SPECIAL OFFER</div>
@@ -653,7 +921,53 @@
             </a>
           </div>
         </section>
-
+        <section class="video">
+          <!-- <div class="video__play">
+            <div class="video__wrap">
+              <iframe
+                class="video__video"
+                src="https://www.youtube.com/embed/53nwh1aHCU8"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div> -->
+          <div class="video__box">
+            <a href="" class="video__link">
+              <div class="video__icon-box">
+                <img
+                  src=" i/icons/circle-play-regular.svg"
+                  alt=""
+                  class="video__img"
+                />
+                <div class="video__circle video__circle_s"></div>
+                <div class="video__circle video__circle_m"></div>
+              </div>
+            </a>
+          </div>
+          <div class="counter">
+            <ul class="counter__box">
+              <li class="counter__item">
+                <div class="counter__num counter__orders">0+</div>
+                <div class="counter__cat">daily order</div>
+              </li>
+              <li class="counter__item">
+                <div class="counter__num counter__dishes">0+</div>
+                <div class="counter__cat">special dishes</div>
+              </li>
+              <li class="counter__item">
+                <div class="counter__num counter__chefs">0+</div>
+                <div class="counter__cat">expert chef</div>
+              </li>
+              <li class="counter__item">
+                <div class="counter__num counter__awards">0+</div>
+                <div class="counter__cat">awards won</div>
+              </li>
+            </ul>
+          </div>
+        </section>
         <section class="strength">
           <div class="strength__header">
             <div class="strength__subtitle">WHY CHOOSE US</div>
@@ -1084,7 +1398,7 @@
       </footer>
     </div>
 
-    <!--  JavaScript here -->
+    <!-- JavaScript here -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/script.js"></script>

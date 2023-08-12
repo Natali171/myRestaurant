@@ -28,7 +28,7 @@
 }
 
 .button {
-  margin-bottom: 36px;
+  align-self: center;
   @include e(link) {
     transition: all 1s ease;
 
@@ -69,8 +69,10 @@
       width: 8px;
       border: 1px solid $mainColor;
       transform: rotate(45deg);
+      animation: separator 3s ease infinite;
     }
   }
+
   @include e(phone) {
   }
   @include e(email) {
@@ -85,6 +87,13 @@
       width: 8px;
       border: 1px solid $mainColor;
       transform: rotate(45deg);
+      animation: separator 3s ease infinite;
     }
+  }
+}
+
+.book {
+  &:hover {
+    cursor: pointer;
   }
 }

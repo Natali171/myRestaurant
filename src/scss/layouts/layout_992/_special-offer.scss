@@ -13,4 +13,13 @@
     background: rgba(255, 255, 255, 0.44);
     opacity: 1;
   }
+  @include e(box) {
+    padding-bottom: 40px;
+    & div:nth-child(2n + 1) {
+      margin: 2% 1% 0;
+    }
+    & div:nth-child(2n) {
+      margin: 0 1% 2%;
+    }
+  }
 }

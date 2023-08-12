@@ -1,14 +1,24 @@
 .header {
   grid-template-columns: 1fr 3fr auto;
+
   @include e(logo-box) {
     justify-self: flex-start;
-    margin-top: 28px;
+    align-self: center;
   }
   @include e(reservation) {
     margin: 28px auto 0;
   }
   @include e(menu-button-box) {
     display: none;
+  }
+
+  @include e(fixed-box) {
+    display: grid;
+    grid-template-columns: 1fr 3fr auto;
+    grid-gap: 10px;
+    width: 100%;
+    padding: 26px 20px 6px;
+    align-content: flex-start;
   }
 }
 
@@ -30,6 +40,7 @@
   font-size: 14px;
   color: $white;
   grid-template-columns: repeat(4, 1fr);
+  padding-left: 20px;
   @include e(adress) {
     display: block;
   }
@@ -44,6 +55,3 @@
   }
 }
 
-// .slick-current {
-//   background-size: 130%;
-// }

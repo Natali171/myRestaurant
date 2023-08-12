@@ -101,6 +101,7 @@
     width: 8px;
     border: 1px solid $mainColor;
     transform: rotate(45deg);
+    animation: separator 3s ease infinite;
   }
 
   @include e(title) {

@@ -30,6 +30,7 @@
     }
   }
   @include e(item) {
+    position: relative;
     max-width: 420px;
     margin: 35px 10px;
     list-style: none;
@@ -52,3 +53,4 @@
     padding: 10px 6% 26px;
   }
 }
+

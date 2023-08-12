@@ -1,0 +1,21 @@
+.video {
+  @include e(icon-box) {
+    top: 130px;
+  }
+  @include e(wrap) {
+    margin: 10% 10%;
+  }
+  @include e(video) {
+    height: 350px;
+  }
+}
+
+.counter {
+  padding-top: 30%;
+  @include e(item) {
+    gap: 16px;
+  }
+  @include e(num) {
+    font-size: rem(70px);
+  }
+}

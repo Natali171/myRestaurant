@@ -7,3 +7,38 @@
     max-width: 520px;
   }
 }
+.book {
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 108px;
+    height: 108px;
+    border: 1px solid $mainColor;
+    transform: rotate(45deg);
+    animation: rotate 8s ease infinite;
+  }
+  z-index: 99;
+  position: absolute;
+  background-color: $mainColor;
+  bottom: 10%;
+  right: 10%;
+  width: 108px;
+  height: 108px;
+  @include e(link) {
+    text-decoration: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  @include e(img) {
+    padding-top: 10px;
+  }
+  @include e(text) {
+    text-transform: uppercase;
+    color: $black;
+    font-family: $baseFontFamily;
+    font-weight: 700;
+  }
+}

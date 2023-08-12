@@ -1,0 +1,140 @@
+.video {
+  margin: 0 -16px;
+  background: no-repeat url("#{$i}backgrounds/image-3.jpg");
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
+
+  @include e(box) {
+  }
+  @include e(icon-box) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 80px;
+    width: 140px;
+    height: 140px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  @include e(circle) {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border: none;
+    border-radius: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    opacity: 0;
+
+    @include m(s) {
+      width: 110px;
+      height: 110px;
+      border: 30px solid $white;
+      opacity: 0.1;
+      animation: play-video 1.6s linear infinite;
+    }
+    @include m(m) {
+      top: -26px;
+      left: -10px;
+      width: 160px;
+      height: 160px;
+      border: 30px solid $white;
+      opacity: 0.1;
+      animation: play-video-m 1.6s linear infinite;
+    }
+  }
+
+  @include e(img) {
+    position: absolute;
+    top: 24px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+  }
+  @include e(play) {
+    &.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    z-index: 99998;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+  @include e(wrap) {
+    margin: 20% 10%;
+  }
+  @include e(video) {
+    width: 100%;
+    height: 300px;
+    max-width: 100%;
+  }
+}
+
+@keyframes play-video {
+  0%,
+  20% {
+  }
+  21% {
+    opacity: 1;
+  }
+  100% {
+    border: 1px solid $white;
+    opacity: 0;
+  }
+}
+@keyframes play-video-m {
+  0%,
+  30% {
+    opacity: 0.1;
+  }
+  100% {
+    border: 1px solid $white;
+    opacity: 0;
+  }
+}
+
+.counter {
+  padding-top: 40%;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  @include e(box) {
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 60px;
+  }
+  @include e(item) {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    color: $white;
+    gap: 10px;
+  }
+  @include e(num) {
+    color: $white;
+    font-family: $secondaryFontFamily;
+    font-size: rem(60px);
+  }
+  @include e(cat) {
+    color: $mainColor;
+    font-size: rem(14px);
+    font-weight: 700;
+    font-family: $baseFontFamily;
+    text-transform: uppercase;
+    width: min-content;
+  }
+}

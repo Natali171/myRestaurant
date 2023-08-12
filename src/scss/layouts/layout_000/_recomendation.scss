@@ -1,0 +1,70 @@
+.recomendation {
+  display: flex;
+  flex-wrap: wrap;
+  @include e(form) {
+    color: $white;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  @include e(form-group) {
+    margin: 20px auto;
+  }
+  @include e(lable) {
+    font-family: $secondaryFontFamily;
+    color: $mainColor;
+  }
+  @include e(input) {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgb(26, 27, 28);
+    color: $grey;
+    display: block;
+    font-family: $baseFontFamily;
+    font-size: rem(16px);
+    margin-top: 10px;
+    padding: 18px 20px;
+    width: 100%;
+  }
+  @include e(select) {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgb(26, 27, 28);
+    color: $white;
+    display: block;
+    font-family: $baseFontFamily;
+    font-size: rem(16px);
+    margin-top: 10px;
+    padding: 18px 20px;
+    width: 100%;
+  }
+  @include e(option) {
+    text-transform: capitalize;
+  }
+  @include e(submit) {
+    font-weight: 400;
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.dishes-offered {
+  @include e(box) {
+    padding: 0;
+  }
+  @include e(item) {
+    padding: 20px;
+    list-style: none;
+  }
+  @include e(img-box) {
+  }
+  @include e(img) {
+    width: 100%;
+    max-width: 100%;
+  }
+  @include e(name) {
+    padding: 16px 0;
+    font-family: $baseFontFamily;
+    color: $white;
+    font-size: rem(24px);
+    width: 100%;
+  }
+}

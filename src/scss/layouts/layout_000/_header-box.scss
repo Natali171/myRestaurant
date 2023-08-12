@@ -27,6 +27,7 @@
   }
 
   @include e(logo-box) {
+    align-self: center;
   }
   @include e(logo) {
     max-width: 160px;
@@ -53,7 +54,7 @@
   }
   @include e(menu-button-box) {
     position: relative;
-    padding-right: 20px;
+    padding-right: 30px;
     margin-top: 6px;
   }
 

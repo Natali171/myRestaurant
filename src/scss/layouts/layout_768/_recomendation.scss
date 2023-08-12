@@ -1,0 +1,34 @@
+.recomendation {
+  @include e(form) {
+  }
+  @include e(form-group) {
+  }
+  @include e(lable) {
+  }
+  @include e(input) {
+  }
+  @include e(select) {
+  }
+  @include e(option) {
+  }
+  @include e(submit) {
+  }
+}
+
+.dishes-offered {
+  @include e(box) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  @include e(item) {
+    max-width: 300px;
+  }
+
+  @include e(img-box) {
+  }
+  @include e(img) {
+  }
+  @include e(name) {
+  }
+}

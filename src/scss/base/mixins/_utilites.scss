@@ -115,3 +115,15 @@
   text-transform: uppercase;
   text-decoration: none;
 }
+
+@keyframes separator {
+  50% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
