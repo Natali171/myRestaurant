@@ -1,10 +1,31 @@
 .recomendation {
-  display: flex;
-  flex-wrap: wrap;
+  background-color: rgb(34, 34, 34);
+  background: 6% 40% no-repeat url("#{$i}backgrounds/bg-3.png"),
+    90% 10% no-repeat url("#{$i}backgrounds/bg-7.png"),
+    90% 70% no-repeat url("#{$i}backgrounds/bg-8.png");
+  padding: 40px 16px;
+  margin: 0 -16px;
+  @include e(box) {
+  }
+  @include e(header) {
+    text-align: center;
+  }
+  @include e(subtitle) {
+    @extend %subtitle;
+  }
+  @include e(divider) {
+    @extend %divider;
+  }
+  @include e(title) {
+    @extend %title;
+  }
+
   @include e(form) {
+    background-color: rgba(0, 0, 0, 0.493);
     color: $white;
-    max-width: 600px;
     margin: 20px auto;
+    padding: 20px 3%;
+    max-width: 650px;
   }
   @include e(form-group) {
     margin: 20px auto;
@@ -47,24 +68,48 @@
 }
 
 .dishes-offered {
+  @include e(main-img-box) {
+    display: none;
+  }
+  @include e(message) {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.382);
+    border: thick double $mainColor;
+    font-family: $secondaryFontFamily;
+    font-size: rem(24px);
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    color: $white;
+    max-width: 600px;
+  }
+  @include e(wraper) {
+    display: none;
+  }
   @include e(box) {
     padding: 0;
   }
   @include e(item) {
+    margin: 0 auto;
+    text-align: center;
     padding: 20px;
     list-style: none;
+    max-width: 350px;
   }
   @include e(img-box) {
+    border-radius: 10%;
+    overflow: hidden;
   }
   @include e(img) {
     width: 100%;
     max-width: 100%;
+    animation: scale-img 10s linear infinite;
   }
   @include e(name) {
     padding: 16px 0;
-    font-family: $baseFontFamily;
+    font-family: $secondaryFontFamily;
     color: $white;
-    font-size: rem(24px);
+    font-size: rem(20px);
     width: 100%;
   }
 }

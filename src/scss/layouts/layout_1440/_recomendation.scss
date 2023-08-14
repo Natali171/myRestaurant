@@ -1,12 +1,7 @@
 .recomendation {
-  @include e(subtitle) {
-    font-size: 14px;
-  }
-  @include e(title) {
-    font-size: 45px;
-  }
-
   @include e(box) {
+  }
+  @include e(form) {
   }
   @include e(form-group) {
   }
@@ -23,19 +18,19 @@
 }
 
 .dishes-offered {
-  align-self: center;
   @include e(box) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    padding-top: 30px;
   }
-  @include e(item) {
+  @include e(main-img-box) {
+    width: 600px;
   }
-
+  @include e(main-img) {
+    width: 100%;
+    max-width: 100%;
+  }
   @include e(img-box) {
   }
-  @include e(img) {
-  }
+
   @include e(name) {
   }
 }

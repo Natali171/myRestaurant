@@ -1,3 +1,31 @@
+// ================================================================================================================
+const tabs = document.querySelectorAll(".menu-cats__link");
+
+document.addEventListener("click", handleTabs);
+
+function handleTabs(e) {
+  const { target } = e;
+  if (![...tabs].includes(target)) {
+    return;
+  }
+  handleTabContent(target);
+  const activeLink = document.querySelector(".menu-cats__link_active");
+  activeLink.classList.remove("menu-cats__link_active");
+  target.classList.add("menu-cats__link_active");
+}
+
+function handleTabContent(target) {
+  const visibleContEL = document.querySelector(`.content-visible`);
+  visibleContEL.style.animation = "hide 1.2s linear";
+  const contentEl = document.querySelector(`.dishes__${target.id}`);
+  setTimeout(() => {
+    visibleContEL.classList.remove("content-visible");
+    contentEl.classList.add("content-visible");
+    contentEl.style.animation = "display 1s linear";
+  }, 500);
+}
+// ================================================================================================================
+
 const menuBtn = $(".header__menu-button");
 const darkOverlay = $(".dark-overlay");
 const mobMenu = $(".mob-menu");
@@ -45,6 +73,9 @@ function resetMobileMenu(e) {
 
 const menu = document.querySelector(".header__fixed-box");
 const menuSections = document.querySelector(".menu-sections__box");
+const strengthBox = document.querySelector(".strength-cats__box");
+const chefsBox = document.querySelector(".chefs__items-box");
+
 let k;
 function fixMenu() {
   menu.getBoundingClientRect().top + k < window.pageYOffset &&
@@ -53,7 +84,13 @@ function fixMenu() {
     menu.classList.remove("header__fixed");
 }
 function handleScroll() {
-  // menuSections.getBoundingClientRect().top <= 600 && animateMenuSections();
+  menuSections.getBoundingClientRect().top <= 600 &&
+    animateItems("menu-sections__item");
+
+  strengthBox.getBoundingClientRect().top <= 600 &&
+    animateItems("strength-cats__item");
+
+  chefsBox.getBoundingClientRect().top <= 600 && animateItems("chefs__item");
   fixMenu();
   const counterBox = document.querySelector(".counter__box");
   if (counterBox.getBoundingClientRect().top < 600) {
@@ -82,25 +119,11 @@ function count(el, max) {
 }
 
 // ================================================================================================================
-function animateMenuSections() {
-  const items = document.querySelectorAll(".menu-sections__item");
+function animateItems(cl) {
+  const items = document.querySelectorAll(`.${cl}`);
   items.forEach((el) => {
-    el.style.opacity = 0;
-    el.style.top = 200 + "px";
-    const moveText = setInterval(() => {
-      el.style.top = `${parseFloat(el.style.top) - 0.5}px`;
-      parseFloat(el.style.top) < 50 && clearInterval(moveText);
-    }, 1);
-
-    const changeTextOp = setInterval(() => {
-      let val = parseFloat(el.style.opacity);
-      if (val < 1) {
-        val += 0.01;
-        el.style.opacity = val;
-        return;
-      }
-      clearInterval(changeTextOp);
-    }, 1);
+    el.style.animation = "moveTop 2s linear";
+    el.style.opacity = 1;
   });
 }
 
@@ -117,8 +140,8 @@ function handleVideoOverlay(e) {
 }
 
 // ================================================================================================================
-// const key = "53e3f78b152c4c658d3733a68a64566a";
-const key = "db254b5cd61744d39a2deebd9c361444"; //
+const key = "53e3f78b152c4c658d3733a68a64566a";
+// const key = "db254b5cd61744d39a2deebd9c361444";
 const cuisine = document.querySelector("#cuisine");
 const requestOb = {};
 document.addEventListener("change", handleSelect);
@@ -164,28 +187,58 @@ function createRequest(e) {
 //   });
 // }
 function getRecomendations(request) {
+  console.log(request);
   $.ajax({
     url: `https://api.spoonacular.com/recipes/complexSearch?apiKey=${key}&number=4${request}`,
     success: function (res) {
       const namesEl = document.querySelectorAll(".dishes-offered__name");
       const imgs = document.querySelectorAll(".dishes-offered__img");
-
-      namesEl.forEach((el, i) => (el.textContent = res.results[i].title));
-      imgs.forEach((img, i) => img.setAttribute("src", res.results[i].image));
-
-      console.log(res);
+      hideImg();
+      if (res.results.length === 0) {
+        hideEl("dishes-offered__wraper");
+        displayEl("dishes-offered__message");
+        delete requestOb.maxReadyTime;
+        return;
+      }
+      namesEl.forEach((el, i) => (el.textContent = ""));
+      imgs.forEach((img, i) => img.setAttribute("src", ""));
+      namesEl.forEach(
+        (el, i) =>
+          i < res.results.length && (el.textContent = res.results[i].title)
+      );
+      imgs.forEach(
+        (img, i) =>
+          i < res.results.length &&
+          img.setAttribute("src", res.results[i].image)
+      );
+      hideEl("dishes-offered__message");
+      displayEl("dishes-offered__wraper");
+      delete requestOb.maxReadyTime;
     },
   });
 }
 
-// https://api.spoonacular.com/recipes/complexSearch?query=pasta&maxFat=25&number=2
+function hideEl(cl) {
+  const el = document.querySelector(`.${cl}`);
+  el.style.animation = "hide 1s linear";
+  setTimeout(() => (el.style.display = "none"), 400);
+}
 
-// $(document).on("click", "#testBtn", () =>
-//   getrecepe(document.getElementById("testInput"))
-// );
+$(document).on("click", ".menu-sections__data", () =>
+  hideEl("menu-sections__data")
+);
+function displayEl(cl) {
+  const el = document.querySelector(`.${cl}`);
+  setTimeout(() => {
+    el.style.display = "block";
+    el.style.animation = "display 1s linear";
+  }, 1200);
+}
 
-// console.log(getsource(id));
-// getrecepe("italian");
+function hideImg() {
+  const img = document.querySelector(".dishes-offered__main-img-box");
+  img.classList.remove("dishes-offered__main-img-box_visible");
+}
 
 // ================================================================================================================
 function initMobile() {

@@ -37,6 +37,7 @@
   @include e(box) {
     display: grid;
     row-gap: 50px;
+    column-gap: 70px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
   }

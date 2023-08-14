@@ -1,0 +1,43 @@
+.recomendation {
+  @include e(box) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+  }
+  @include e(form) {
+  }
+  @include e(form-group) {
+  }
+  @include e(lable) {
+  }
+  @include e(input) {
+  }
+  @include e(select) {
+  }
+  @include e(option) {
+  }
+  @include e(submit) {
+  }
+}
+
+.dishes-offered {
+  @include e(main-img-box) {
+    margin: 60px auto 0;
+    width: 480px;
+    overflow: hidden;
+    @include m(visible) {
+      display: block;
+    }
+  }
+  @include e(main-img) {
+    width: 100%;
+    max-width: 100%;
+    animation: scale-img 10s linear infinite;
+  }
+  @include e(img-box) {
+  }
+  @include e(img) {
+  }
+  @include e(name) {
+  }
+}
