@@ -1,7 +1,8 @@
 .menu {
   background-color: rgb(20, 21, 22);
   background-image: url("#{$i}backgrounds/bg-5.png");
-  padding: 40px 16px 70px;
+  animation: moveBgEls 10s linear infinite;
+  padding: 80px 16px 70px;
   margin: 0 -16px;
   @include e(header) {
     text-align: center;

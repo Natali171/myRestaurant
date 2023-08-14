@@ -3,7 +3,7 @@
   background: 0% 100% no-repeat url("#{$i}backgrounds/bg-1.png"),
     100% 0% no-repeat url("#{$i}backgrounds/bg-2.png");
   margin: 0 -16px;
-  padding: 40px 16px;
+  padding: 80px 16px;
   text-align: center;
   @include e(header) {
     text-align: center;

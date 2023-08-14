@@ -19,32 +19,33 @@
   @include e(link) {
     color: $white;
     font-family: $baseFontFamily;
-    font-size: 14px;
+    font-size: rem(14px);
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
   }
   @include e(submenu-box) {
-    margin-top: 20px;
+    margin-top: 26px;
     background-color: rgb(23, 23, 23);
-    padding: 0;
+    padding: 10px;
     position: absolute;
     visibility: hidden;
     transition: all 0.3s ease;
+    @include m(imgs) {
+      left: 60px;
+      display: flex;
+    }
   }
   @include e(submenu-item) {
     list-style: none;
-    padding: 14px 24px;
+    padding: 18px 24px;
     text-align: left;
     white-space: nowrap;
-    &:hover .main-menu__submenu-lv2-box {
-      visibility: visible;
-    }
   }
   @include e(submenu-link) {
     color: $white;
     font-family: $baseFontFamily;
-    font-size: 14px;
+    font-size: rem(16px);
     font-weight: 700;
     padding-left: 10px;
     text-decoration: none;
@@ -53,25 +54,37 @@
   @include e(submenu-lv2-box) {
     background-color: rgb(23, 23, 23);
     left: 100%;
-    padding: 0;
+    padding: 10px;
     position: absolute;
     visibility: hidden;
     transition: all 0.2s ease-in-out;
   }
   @include e(submenu-lv2-item) {
     list-style: none;
-    padding: 14px 24px;
+    padding: 18px 24px;
     white-space: nowrap;
   }
 
   @include e(submenu-lv2-link) {
     color: $white;
     font-family: $baseFontFamily;
-    font-size: 14px;
+    font-size: rem(16px);
     font-weight: 700;
     padding-left: 10px;
     text-decoration: none;
     text-transform: capitalize;
+  }
+
+  @include e(img-box) {
+    overflow: hidden;
+  }
+  @include e(img) {
+    max-width: 160px;
+  }
+  @include e(item-text) {
+    text-align: center;
+    padding: 14px;
+    font-size: rem(20px);
   }
 }
 

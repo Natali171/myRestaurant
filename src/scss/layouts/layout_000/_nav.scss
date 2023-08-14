@@ -7,7 +7,8 @@
 }
 
 .mob-menu {
-  background-color: rgba(26, 26, 26, 0.7);
+  background: $black no-repeat url("#{$i}backgrounds/pattern-4.png");
+  // background-color: rgba(26, 26, 26, 0.7);
   padding: 1.5rem 0;
   position: fixed;
   width: 20rem;
@@ -97,7 +98,8 @@
     text-transform: uppercase;
   }
   @include e(submenu-box) {
-    background-color: rgb(23, 23, 23);
+    margin: 12px auto;
+    background-color: rgba(23, 23, 23, 0.501);
     display: none;
     padding: 0;
     z-index: 1;
@@ -123,7 +125,8 @@
     text-transform: capitalize;
   }
   @include e(submenu-lv2-box) {
-    background-color: rgb(23, 23, 23);
+    margin: 12px auto;
+    background-color: rgba(23, 23, 23, 0.501);
     left: 100%;
     padding: 0;
     display: none;

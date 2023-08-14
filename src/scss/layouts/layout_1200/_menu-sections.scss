@@ -7,16 +7,16 @@
   }
 
   @include e(item) {
-    // &:hover .menu-sections__img-box::before {
-    //   transform: rotateY(180deg);
-    // }
-    // &:hover .menu-sections__img-box {
-    //   transform: scale(1.1);
-    // }
-    // &:hover .menu-sections__name {
-    //   font-size: rem(42px);
-    //   margin-top: 50px;
-    // }
+    &:hover .menu-sections__img-box::before {
+      transform: rotateY(180deg);
+    }
+    &:hover .menu-sections__img-box {
+      transform: scale(1.1);
+    }
+    &:hover .menu-sections__name {
+      font-size: rem(42px);
+      margin-top: 50px;
+    }
     // &:hover {
     //   transform: translate3d(150px, 50px, 100px);
     // }

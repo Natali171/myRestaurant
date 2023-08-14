@@ -20,7 +20,7 @@
     transition: all 1.6s ease;
   }
   @include e(fixed) {
-    background-color: rgb(6, 12, 0);
+    background-color: rgb(31, 31, 31);
     top: 0;
     position: fixed;
     padding: 10px 20px;
@@ -188,4 +188,8 @@
       bottom: -54px;
     }
   }
+}
+
+.book {
+  display: none;
 }

@@ -34,6 +34,7 @@
 }
 
 .dishes {
+  margin: 0 30px;
   @include e(box) {
     display: grid;
     row-gap: 50px;
@@ -44,13 +45,8 @@
   @include e(item) {
     max-width: 480px;
     padding: 0;
-    &:hover .dishes__img {
-      transform: scale(1.05);
-      opacity: 1;
-    }
   }
   @include e(img) {
-    transition: all 500ms ease;
-    opacity: 0.6;
+    opacity: 1;
   }
 }

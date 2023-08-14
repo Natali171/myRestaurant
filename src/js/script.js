@@ -140,8 +140,8 @@ function handleVideoOverlay(e) {
 }
 
 // ================================================================================================================
-const key = "53e3f78b152c4c658d3733a68a64566a";
-// const key = "db254b5cd61744d39a2deebd9c361444";
+// const key = "53e3f78b152c4c658d3733a68a64566a";
+const key = "db254b5cd61744d39a2deebd9c361444";
 const cuisine = document.querySelector("#cuisine");
 const requestOb = {};
 document.addEventListener("change", handleSelect);
@@ -174,7 +174,7 @@ function createRequest(e) {
     ""
   );
   maxReadyTime.value = "";
-  // getRecomendations(request);
+  getRecomendations(request);
 }
 
 // function getsource(id) {
@@ -248,7 +248,7 @@ function initMobile() {
 }
 
 function initTablet() {
-  des = true;
+  des = false;
   k = 100;
   console.log("is-tablet");
 }
