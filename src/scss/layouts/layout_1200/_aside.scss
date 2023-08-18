@@ -1,8 +1,11 @@
 .reservation {
   @include e(wrap) {
+    grid-template-columns: 1fr 40%;
     margin: 0 10%;
   }
   @include e(box) {
+    justify-self: end;
+    padding: 0 30px;
   }
   @include e(input) {
     &:hover {
@@ -11,4 +14,6 @@
   }
 }
 .contacts {
+  justify-self: flex-end;
+  margin-left: 0;
 }

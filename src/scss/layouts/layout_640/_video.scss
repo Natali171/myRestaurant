@@ -8,10 +8,12 @@
   @include e(video) {
     height: 350px;
   }
+  @include e(box) {
+    top: 12%;
+  }
 }
 
 .counter {
-  padding-top: 30%;
   @include e(item) {
     gap: 16px;
   }

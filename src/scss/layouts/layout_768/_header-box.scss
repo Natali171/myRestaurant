@@ -40,3 +40,15 @@
     font-weight: 700;
   }
 }
+
+@keyframes header {
+  0% {
+    background-size: 180%;
+  }
+  50% {
+    background-size: 210%;
+  }
+  100% {
+    background-size: 180%;
+  }
+}

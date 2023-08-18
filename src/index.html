@@ -386,12 +386,12 @@
               <a href="#" class="menu-sections__link">
                 <div class="menu-sections__img-box">
                   <img
-                    src="i/resource/offer-image-2.jpg"
+                    src="i/resource/offer-image-3.jpg"
                     alt="Breackfast"
                     class="menu-sections__img"
                   />
                 </div>
-                <h3 class="menu-sections__name">Appetizers</h3>
+                <h3 class="menu-sections__name">Drinks</h3>
                 <div class="menu-sections__menu-link">view menu</div>
               </a>
             </div>
@@ -399,12 +399,12 @@
               <a href="#" class="menu-sections__link">
                 <div class="menu-sections__img-box">
                   <img
-                    src="i/resource/offer-image-3.jpg"
+                    src="i/resource/offer-image-2.jpg"
                     alt="Breackfast"
                     class="menu-sections__img"
                   />
                 </div>
-                <h3 class="menu-sections__name">Drinks</h3>
+                <h3 class="menu-sections__name">Appetizers</h3>
                 <div class="menu-sections__menu-link">view menu</div>
               </a>
             </div>
@@ -1189,9 +1189,7 @@
               </button>
             </form>
             <div class="dishes-offered">
-              <div class="dishes-offered__message">
-                Sorry, no results found, please try to change filter criteria
-              </div>
+              <div class="dishes-offered__message"></div>
               <div
                 class="dishes-offered__main-img-box dishes-offered__main-img-box_visible"
               >
@@ -1204,46 +1202,6 @@
 
               <div class="dishes-offered__wraper">
                 <ul class="dishes-offered__box">
-                  <!-- <li class="dishes-offered__item">
-                  <div class="dishes-offered__img-box">
-                    <img
-                      src="	https://spoonacular.com/recipeImages/637016-312x231.jpg"
-                      alt=""
-                      class="dishes-offered__img"
-                    />
-                  </div>
-                  <div class="dishes-offered__name">Green Monster Ice Pops</div>
-                </li>
-                <li class="dishes-offered__item">
-                  <div class="dishes-offered__img-box">
-                    <img
-                      src="	https://spoonacular.com/recipeImages/637016-312x231.jpg"
-                      alt=""
-                      class="dishes-offered__img"
-                    />
-                  </div>
-                  <div class="dishes-offered__name">Green Monster Ice Pops</div>
-                </li>
-                <li class="dishes-offered__item">
-                  <div class="dishes-offered__img-box">
-                    <img
-                      src="	https://spoonacular.com/recipeImages/637016-312x231.jpg"
-                      alt=""
-                      class="dishes-offered__img"
-                    />
-                  </div>
-                  <div class="dishes-offered__name">Green Monster Ice Pops</div>
-                </li>
-                <li class="dishes-offered__item">
-                  <div class="dishes-offered__img-box">
-                    <img
-                      src="	https://spoonacular.com/recipeImages/637016-312x231.jpg"
-                      alt=""
-                      class="dishes-offered__img"
-                    />
-                  </div>
-                  <div class="dishes-offered__name">Green Monster Ice Pops</div>
-                </li> -->
                   <li class="dishes-offered__item">
                     <div class="dishes-offered__img-box">
                       <img src="" alt="" class="dishes-offered__img" />
@@ -1390,7 +1348,14 @@
           </div>
         </section>
         <section class="video">
-          <!-- <div class="video__play">
+          <div class="video__header">
+            <div class="video__subtitle">AMAZING EXPERIENCE</div>
+            <div class="video__divider-box">
+              <img src="i/separator.svg" alt="" class="video__divider" />
+            </div>
+            <h2 class="video__title">Watch Our Video</h2>
+          </div>
+          <div class="video__play">
             <div class="video__wrap">
               <iframe
                 class="video__video"
@@ -1401,7 +1366,7 @@
                 allowfullscreen
               ></iframe>
             </div>
-          </div> -->
+          </div>
           <div class="video__box">
             <a href="" class="video__link">
               <div class="video__icon-box">
@@ -1414,6 +1379,9 @@
                 <div class="video__circle video__circle_m"></div>
               </div>
             </a>
+          </div>
+          <div class="video__text">
+            A modern restaurant with a menu that will make your mouth water.
           </div>
           <div class="counter">
             <ul class="counter__box">
@@ -1510,14 +1478,15 @@
                 <span class="reservation__phone">+88-123-123456</span> or fill
                 out the order form
               </p>
+              <div class="reservation__message"></div>
               <form action="" class="reservation__form">
                 <input
                   type="text"
-                  placeholder="Your Name"
+                  placeholder="Your Full Name"
                   class="reservation__input reservation__input_name"
                 />
                 <input
-                  type="email"
+                  type="text"
                   placeholder="Email"
                   class="reservation__input reservation__input_email"
                 />
@@ -1530,29 +1499,42 @@
                     1 Person
                   </option>
                   <option value="2" class="reservation__option">
-                    2 Person
+                    2 Persons
                   </option>
                   <option value="3" class="reservation__option">
-                    3 Person
+                    3 Persons
                   </option>
                   <option value="4" class="reservation__option">
-                    4 Person
+                    4 Persons
                   </option>
                   <option value="5" class="reservation__option">
-                    5 Person
+                    5 Persons
                   </option>
                   <option value="6" class="reservation__option">
-                    6 Person
+                    6 Persons
                   </option>
                   <option value="7" class="reservation__option">
-                    7 Person
+                    7 Persons
                   </option>
                   <option value="8" class="reservation__option">
-                    8 Person
+                    8 Persons
+                  </option>
+                  <option value="8" class="reservation__option">
+                    9 Persons
+                  </option>
+                  <option value="8" class="reservation__option">
+                    10 Persons
+                  </option>
+                  <option value="8" class="reservation__option">
+                    11 Persons
+                  </option>
+                  <option value="8" class="reservation__option">
+                    12 Persons
                   </option>
                 </select>
                 <input
                   type="date"
+                  id="reservation-date"
                   class="reservation__input reservation__input_date"
                 />
                 <select
@@ -1564,7 +1546,7 @@
                     11:00 am
                   </option>
                   <option value="12" class="reservation__option">
-                    11:00 am
+                    12:00 am
                   </option>
                   <option value="13" class="reservation__option">
                     13:00 pm
@@ -1602,14 +1584,17 @@
                   placeholder="Message"
                   class="reservation__input reservation__input_message"
                 ></textarea>
+                <div class="reservation__date-message"></div>
                 <button class="button reservation__submit" type="submit">
                   <a class="button__link">
                     <div
+                      id="reservation-submit"
                       class="button__text button__text_first button__text_colored"
                     >
                       Book a table
                     </div>
                     <div
+                      id="reservation-submit"
                       class="button__text button__text_second button__text_transparent reservation__submit"
                     >
                       Book a table
@@ -1840,21 +1825,24 @@
                 25% Off.</span
               >
             </p>
+            <div class="footer-subscription__message"></div>
             <form class="footer-subscription__form">
               <input
                 type="text"
                 placeholder="Email"
-                class="footer-subscription__input footer-subscription__input_text"
+                class="footer-subscription__email"
               />
               <button class="button reservation__submit" type="submit">
-                <a class="button__link">
+                <a id="subscription-submit" class="button__link">
                   <div
-                    class="button__text button__text_first button__text_colored footer-subscription__input_submit"
+                    id="subscription-submit"
+                    class="button__text button__text_first button__text_colored footer-subscription__submit"
                   >
                     Subscribe
                   </div>
                   <div
-                    class="button__text button__text_second button__text_transparent footer-subscription__input_submit"
+                    id="subscription-submit"
+                    class="button__text button__text_second button__text_transparent footer-subscription__submit"
                   >
                     Subscribe
                   </div>
@@ -1870,6 +1858,12 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/ssm.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/generalFunc.js"></script>
+    <script src="js/validations.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/onScroll.js"></script>
+    <script src="js/api.js"></script>
     <script src="js/script.js"></script>
     <script src="js/mySlick.js"></script>
   </body>

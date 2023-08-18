@@ -1,11 +1,29 @@
 .video {
-  margin: 0 -16px;
+  margin: 40px -16px 0;
+  padding: 60px 0 0;
   background: no-repeat url("#{$i}backgrounds/image-3.jpg");
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.6);
   position: relative;
-
+  @include e(header) {
+    text-align: center;
+    padding-bottom: 160px;
+  }
+  @include e(subtitle) {
+    @extend %subtitle;
+  }
+  @include e(divider) {
+    @extend %divider;
+  }
+  @include e(title) {
+    @extend %title;
+  }
   @include e(box) {
+    position: absolute;
+    top: 18%;
+    left: 0;
+    right: 0;
+    text-align: center;
   }
   @include e(icon-box) {
     position: absolute;
@@ -80,6 +98,9 @@
     height: 300px;
     max-width: 100%;
   }
+  @include e(text) {
+    display: none;
+  }
 }
 
 @keyframes play-video {
@@ -106,16 +127,26 @@
 }
 
 .counter {
-  padding-top: 40%;
   background-color: rgba(0, 0, 0, 0.3);
 
   @include e(box) {
+    position: relative;
     background-color: rgba(0, 0, 0, 0.4);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 20px;
     padding: 60px;
+    &::before {
+      background: url("#{$i}backgrounds/pattern-10.svg") center repeat;
+      background-size: cover;
+      content: "";
+      position: absolute;
+      left: 5%;
+      top: 0;
+      width: 90%;
+      height: 20px;
+    }
   }
   @include e(item) {
     display: flex;

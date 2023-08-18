@@ -29,6 +29,9 @@
       grid-column: span 2;
     }
   }
+  @include e(date-message) {
+    grid-column: span 6;
+  }
   @include e(submit) {
     grid-column: span 6;
   }

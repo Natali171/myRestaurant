@@ -1,4 +1,7 @@
 .video {
+  @include e(title) {
+    font-size: 60px;
+  }
   @include e(icon-box) {
     top: 80x;
   }
@@ -11,7 +14,6 @@
 }
 
 .counter {
-  padding-top: 22%;
   @include e(item) {
     gap: 16px;
   }

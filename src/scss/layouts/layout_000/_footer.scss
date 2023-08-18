@@ -135,20 +135,32 @@
       padding: 8px 9px;
     }
   }
-  @include e(input) {
-    @include m(text) {
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      background-color: rgb(26, 27, 28);
-      color: $grey;
-      flex: 1;
-      font-family: $baseFontFamily;
-      font-size: rem(16px);
-      padding: 12px 20px 12px 40px;
-    }
-    @include m(submit) {
-      font-weight: 400;
-      text-align: center;
-      width: 100%;
-    }
+  @include e(email) {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgb(26, 27, 28);
+    color: $grey;
+    flex: 1;
+    font-family: $baseFontFamily;
+    font-size: rem(16px);
+    padding: 12px 20px 12px 40px;
+  }
+  @include e(submit) {
+    text-align: center;
+    margin: 0 auto;
+    left: 25%;
+  }
+
+  @include e(message) {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.382);
+    border: thick double $mainColor;
+    font-family: $secondaryFontFamily;
+    font-size: rem(24px);
+    text-align: center;
+    line-height: 1.5;
+    margin: 0 auto;
+    padding: 30px 20px;
+    color: $white;
+    max-width: 600px;
   }
 }

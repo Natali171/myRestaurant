@@ -97,3 +97,15 @@
     cursor: pointer;
   }
 }
+
+@keyframes header {
+  0% {
+    background-size: 120%;
+  }
+  50% {
+    background-size: 150%;
+  }
+  100% {
+    background-size: 120%;
+  }
+}

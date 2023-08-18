@@ -25,3 +25,12 @@ body {
   max-width: 100%;
   width: 100%;
 }
+
+.invalid-input {
+  background-color: $mainColor !important;
+  border: 2px solid rgb(121, 15, 15) !important;
+  color: rgb(121, 15, 15) !important;
+  &::placeholder {
+    color: rgb(121, 15, 15);
+  }
+}

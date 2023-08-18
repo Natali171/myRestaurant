@@ -46,7 +46,7 @@
     }
   }
   @include e(submenu-link) {
-    transition: all 0.4s ease;
+    transition: all 0.2s ease;
     &::before {
       content: "";
       left: 20px;
@@ -57,7 +57,7 @@
       border: 1px solid $mainColor;
       transform: rotate(45deg);
       visibility: hidden;
-      transition: all 0.6s ease;
+      transition: all 0.3s ease;
     }
   }
   @include e(submenu-lv2-item) {
@@ -71,7 +71,7 @@
     }
   }
   @include e(submenu-lv2-link) {
-    transition: all 0.4s ease;
+    transition: all 0.2s ease;
     &::before {
       content: "";
       left: 20px;
@@ -82,7 +82,7 @@
       border: 1px solid $mainColor;
       transform: rotate(45deg);
       visibility: hidden;
-      transition: all 0.6s ease;
+      transition: all 0.3s ease;
     }
   }
 

@@ -1,5 +1,5 @@
 .footer-subscription {
-  @include e(input) {
+  @include e(email) {
     &:hover {
       border-color: $mainColor;
     }

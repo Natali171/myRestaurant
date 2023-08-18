@@ -107,6 +107,7 @@
   max-width: 100%;
 
   @include e(item) {
+    background-size: cover;
     &:nth-of-type(1) {
       background: no-repeat url("#{$i}main-slider/slider-1.jpg");
     }
@@ -192,4 +193,8 @@
 
 .book {
   display: none;
+}
+
+.slick-current {
+  animation: header 10s linear infinite;
 }

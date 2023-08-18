@@ -12,7 +12,6 @@ const jsArr = [
   path.resolve(__dirname, "src/js/jquery-3.3.1.min.js"),
   path.resolve(__dirname, "src/js/ssm.min.js"),
   path.resolve(__dirname, "src/js/slick.min.js"),
-  path.resolve(__dirname, "src/js/mySlick.js"),
   path.resolve(__dirname, "src/js/script.js"),
 ];
 
