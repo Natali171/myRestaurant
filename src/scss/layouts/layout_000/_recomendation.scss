@@ -77,7 +77,7 @@
 
 .dishes-offered {
   @include e(main-img-box) {
-    display: none;
+    display: block;
   }
   @include e(message) {
     display: none;
@@ -147,7 +147,7 @@
   background-size: cover;
   height: 100%;
   color: $white;
-  display: block;
+  display: none;
   @include e(box) {
     padding: 30px 26px;
     // text-align: center;
@@ -235,7 +235,9 @@
   @include e(pointer) {
     align-self: flex-end;
   }
-
+  @include e(wines) {
+    display: none;
+  }
   @include e(wine) {
     position: relative;
     display: block;

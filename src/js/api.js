@@ -9,6 +9,7 @@ function handleWinesDisplay(e) {
     return;
   }
   document.querySelector(".chosen-dish__wines").innerHTML = dishes[i].wines;
+  hideEl("chosen-dish__pointer");
   displayEl("chosen-dish__wines");
 }
 
@@ -45,6 +46,7 @@ function getMoreInfo() {
           ""
         )) &&
         displayEl("chosen-dish__wines-box");
+
       renderChosenDish(i);
     },
     error: function () {
@@ -56,6 +58,7 @@ function getMoreInfo() {
 function renderChosenDish(i) {
   hideEl("dishes-offered__wraper");
   displayEl("chosen-dish");
+  hideEl("chosen-dish__wines");
   for (let key in dishes[i]) {
     key !== "img" &&
       key !== "id" &&
@@ -68,7 +71,6 @@ function renderChosenDish(i) {
     .setAttribute("src", dishes[i].img);
 }
 
-("READY IN MINUTES");
 // =====================================================================================================================================
 const key = "53e3f78b152c4c658d3733a68a64566a";
 // const key = "db254b5cd61744d39a2deebd9c361444";
@@ -142,6 +144,7 @@ function getRecomendations(request) {
       }
       hideEl("dishes-offered__wraper");
       displayEl("dishes-offered__wraper");
+
       dishes = [];
       res.results.forEach((el) => {
         dishes.push({
@@ -172,6 +175,7 @@ function renderRecomendations() {
   });
 
   hideEl("dishes-offered__message");
+  displayEl("chosen-dish__pointer");
   displayEl("dishes-offered__wraper");
   delete requestOb.maxReadyTime;
 }

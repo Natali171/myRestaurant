@@ -46,3 +46,22 @@
     }
   }
 }
+
+.chosen-dish {
+  @include e(box) {
+  }
+
+  @include e(wines-box) {
+  }
+  @include e(wines-tab-text) {
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      color: $white;
+    }
+  }
+  @include e(pointer) {
+  }
+  @include e(wines) {
+  }
+}
