@@ -21,19 +21,19 @@
 }
 
 .dishes-offered {
-  @include e(main-img-box) {
-    margin: 60px auto 0;
-    width: 480px;
-    overflow: hidden;
-    @include m(visible) {
-      display: block;
-    }
-  }
-  @include e(main-img) {
-    width: 100%;
-    max-width: 100%;
-    animation: scale-img 10s linear infinite;
-  }
+  // @include e(main-img-box) {
+  //   margin: 60px auto 0;
+  //   width: 480px;
+  //   overflow: hidden;
+  //   @include m(visible) {
+  //     display: block;
+  //   }
+  // }
+  // @include e(main-img) {
+  //   width: 100%;
+  //   max-width: 100%;
+  //   animation: scale-img 10s linear infinite;
+  // }
   @include e(img-box) {
   }
   @include e(img) {

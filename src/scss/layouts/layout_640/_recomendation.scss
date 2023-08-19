@@ -1,0 +1,15 @@
+.chosen-dish {
+  @include e(box) {
+    padding: 60px;
+  }
+
+  @include e(wines-box) {
+  }
+  @include e(wines-tab) {
+  }
+  @include e(pointer) {
+  }
+  @include e(wines) {
+
+  }
+}

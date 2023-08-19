@@ -1,0 +1,49 @@
+.chosen-dish {
+  @include e(box) {
+    padding: 36px;
+  }
+
+  @include e(name) {
+    text-align: center;
+  }
+
+  @include e(info) {
+    display: flex;
+    align-items: center;
+  }
+  @include e(time-box) {
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+  }
+  @include e(time-icon) {
+    align-self: center;
+    font-size: rem(20px);
+  }
+
+  @include e(time) {
+    padding: 20px;
+    font-family: $baseFontFamily;
+    font-size: rem(20px);
+  }
+
+  @include e(price-box) {
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+  }
+  @include e(price-icon) {
+  }
+  @include e(price) {
+  }
+  @include e(price-dollar) {
+  }
+  @include e(wines-box) {
+  }
+  @include e(wines-tab) {
+  }
+  @include e(pointer) {
+  }
+  @include e(wines) {
+  }
+}

@@ -93,20 +93,26 @@
     max-width: 600px;
   }
   @include e(wraper) {
+    background: $black no-repeat url("#{$i}backgrounds/pattern-4.png");
+    background-size: cover;
     display: none;
   }
   @include e(box) {
     padding: 0;
   }
   @include e(item) {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px 8px 20px;
     margin: 0 auto;
-    text-align: center;
-    padding: 20px;
+    text-align: left;
     list-style: none;
     max-width: 350px;
   }
   @include e(img-box) {
-    border-radius: 10%;
+    align-self: center;
+    max-width: 270px;
+    border-radius: 2px;
     overflow: hidden;
   }
   @include e(img) {
@@ -115,10 +121,136 @@
     animation: scale-img 10s linear infinite;
   }
   @include e(name) {
-    padding: 16px 0;
+    flex: 1;
+    padding: 8px 20px 0;
     font-family: $secondaryFontFamily;
     color: $white;
-    font-size: rem(20px);
+    font-size: rem(23px);
+    line-height: 1.5;
     width: 100%;
+  }
+  @include e(more) {
+    border: 1px solid $mainColor;
+    background-color: black;
+    margin: auto 5px 0 auto;
+    padding: 7px 14px;
+    font-family: $secondaryFontFamily;
+    color: $mainColor;
+    font-size: rem(16px);
+    text-align: right;
+    text-transform: capitalize;
+  }
+}
+.chosen-dish {
+  padding: 30px 16px;
+  background: $black no-repeat url("#{$i}backgrounds/pattern-4.png");
+  background-size: cover;
+  height: 100%;
+  color: $white;
+  display: block;
+  @include e(box) {
+    padding: 30px 26px;
+    // text-align: center;
+    border: 1px solid $mainColor;
+  }
+  @include e(img-box) {
+    align-self: center;
+    max-width: 340px;
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  @include e(img) {
+    width: 100%;
+    max-width: 100%;
+    animation: scale-img 10s linear infinite;
+  }
+  @include e(name) {
+    padding: 20px 0;
+    font-family: $secondaryFontFamily;
+    color: $white;
+    font-size: rem(26px);
+    line-height: 1.5;
+  }
+
+  @include e(info) {
+    color: $mainColor;
+    border-block: 1px solid $mainColor;
+  }
+  @include e(time-box) {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+  }
+  @include e(time-icon) {
+    align-self: center;
+    font-size: rem(20px);
+  }
+
+  @include e(time) {
+    padding: 20px;
+    font-family: $baseFontFamily;
+
+    font-size: rem(20px);
+  }
+
+  @include e(price-box) {
+    display: flex;
+  }
+  @include e(price-icon) {
+    align-self: center;
+    font-size: rem(20px);
+  }
+  @include e(price) {
+    padding: 20px;
+    font-family: $baseFontFamily;
+
+    font-size: rem(20px);
+  }
+  @include e(price-dollar) {
+    font-family: $baseFontFamily;
+    font-size: rem(20px);
+  }
+  @include e(ingredients) {
+    padding: 20px 0;
+    font-family: $baseFontFamily;
+    color: $white;
+    font-size: rem(18px);
+    text-transform: capitalize;
+  }
+  @include e(wines-box) {
+  }
+  @include e(wines-link) {
+    display: flex;
+    color: $mainColor;
+    gap: 10px;
+    text-decoration: none;
+  }
+  @include e(wines-tab) {
+  }
+  @include e(wines-tab-text) {
+    font-family: $secondaryFontFamily;
+    font-size: rem(24px);
+  }
+  @include e(pointer) {
+    align-self: flex-end;
+  }
+
+  @include e(wine) {
+    position: relative;
+    display: block;
+    padding: 12px;
+    font-family: $secondaryFontFamily;
+    text-transform: capitalize;
+    font-size: rem(20px);
+    list-style-type: none;
+    &::before {
+      content: "";
+      background: no-repeat url("#{$i}icons/wine-glass-empty-solid.svg");
+      position: absolute;
+      left: -20px;
+      width: 20px;
+      height: 20px;
+    }
   }
 }
