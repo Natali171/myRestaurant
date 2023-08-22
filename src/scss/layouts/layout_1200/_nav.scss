@@ -1,15 +1,21 @@
 .main-menu {
   @include e(item) {
-    position: relative;
     &:hover .main-menu__link::before {
-      transform: scaleX(0.5);
+      transform: scaleX(1);
       transition: all 0.3s ease;
     }
     &:hover .main-menu__link {
       color: $mainColor;
     }
+    @include m(fav) {
+      &:hover .main-menu__heart {
+        opacity: 1;
+      }
+    }
   }
   @include e(link) {
+    position: relative;
+
     transition: all 0.3s ease;
     &:hover {
       color: $mainColor;
@@ -29,7 +35,7 @@
   }
   @include e(submenu-box) {
     @include m(imgs) {
-      left: -100px;
+      left: 20%;
     }
   }
   @include e(submenu-item) {

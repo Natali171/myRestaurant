@@ -1,0 +1,90 @@
+let i;
+let dishes = [];
+
+document.addEventListener("click", handleDishInfo);
+
+function handleDishInfo(e) {
+  const { target } = e;
+  if (target.classList[0] !== "dishes-offered__more") {
+    return;
+  }
+  const moreInfo = document.querySelectorAll(".dishes-offered__more");
+  i = [...moreInfo].findIndex((el) => el == target);
+  dishes[i].ingredients ? renderDishInfo() : getDishInfo(i);
+}
+
+async function getDishInfo() {
+  id = dishes[i].id;
+  try {
+    let response = await fetch(
+      `https://api.spoonacular.com/recipes/${id}/information?apiKey=${key}&includeNutrition=false`
+    );
+    let res = await response.json();
+    handleDishInfoResponse(res);
+  } catch (arr) {
+    displayMessage("Sorry, something went wrong. Please try again later");
+  }
+}
+
+function handleDishInfoResponse(res) {
+  hideEl("chosen-dish__wines-box");
+  dishes[i].ingredients = res.extendedIngredients
+    .reduce((str, ing) => (str += ing.name + ", "), "")
+    .slice(0, -2);
+  dishes[i].time = res.readyInMinutes + " m";
+  dishes[i].price = res.pricePerServing;
+  res.winePairing?.pairedWines?.length &&
+    (dishes[i].wines = res.winePairing.pairedWines.reduce(
+      (str, w) => (str += `<li class="chosen-dish__wine">${w}</li>`),
+      ""
+    )) &&
+    displayEl("chosen-dish__wines-box");
+  renderDishInfo();
+}
+
+function renderDishInfo() {
+  hideEl("dishes-offered__wraper");
+  hideEl("chosen-dish__wines");
+  displayEl("chosen-dish__pointer");
+  displayEl("chosen-dish");
+  for (let key in dishes[i]) {
+    key !== "img" &&
+      key !== "id" &&
+      key !== "wines" &&
+      (document.querySelector(`.chosen-dish__${key}`).textContent =
+        dishes[i][key]);
+  }
+  document
+    .querySelector(".chosen-dish__img")
+    .setAttribute("src", dishes[i].img);
+}
+
+// =====================================================================================================================================
+document.addEventListener("click", handleGoBack);
+
+function handleGoBack(e) {
+  const { target } = e;
+  if (target.classList[0] !== "chosen-dish__back-svg") {
+    return;
+  }
+  hideEl("chosen-dish");
+  displayEl("dishes-offered__wraper");
+}
+
+// =====================================================================================================================================
+document.addEventListener("click", handleWinesDisplay);
+
+function handleWinesDisplay(e) {
+  const { target } = e;
+  e.preventDefault();
+  e.stopPropagation();
+  if (target.classList[0] !== "chosen-dish__wines-tab-text") {
+    return;
+  }
+  document.querySelector(".chosen-dish__wines").innerHTML = dishes[i].wines;
+
+  hideEl("chosen-dish__pointer");
+  displayEl("chosen-dish__wines");
+}
+
+// =====================================================================================================================================

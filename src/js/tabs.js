@@ -1,10 +1,8 @@
-const tabs = document.querySelectorAll(".menu-cats__link");
-
 document.addEventListener("click", handleTabs);
 
 function handleTabs(e) {
   const { target } = e;
-  if (![...tabs].includes(target)) {
+  if (!target.classList.contains("menu-cats__link")) {
     return;
   }
   e.preventDefault();

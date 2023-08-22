@@ -2,7 +2,6 @@ const menu = document.querySelector(".header__fixed-box");
 const menuSections = document.querySelector(".menu-sections__box");
 const strengthBox = document.querySelector(".strength-cats__box");
 const chefsBox = document.querySelector(".chefs__items-box");
-const dishesItem = document.querySelector(".dishes__item");
 
 let k;
 
@@ -18,11 +17,9 @@ function handleScroll() {
   menuSections.getBoundingClientRect().top <= 600 &&
     animateItems("menu-sections__item");
   menuSections.getBoundingClientRect().top <= -600 &&
-    animateItems("dishes__item", 300, 0.5);
-
+    animateItems("dishes__item", 250, 0.4);
   strengthBox.getBoundingClientRect().top <= 600 &&
     animateItems("strength-cats__item");
-
   chefsBox.getBoundingClientRect().top <= 600 && animateItems("chefs__item");
   fixMenu();
   const counterBox = document.querySelector(".counter__box");
@@ -35,7 +32,7 @@ function handleScroll() {
 }
 
 function count(el, max) {
-  const step = 20000 / max;
+  const step = 15000 / max;
   const item = document.querySelector(`.counter__${el}`);
   const increaseItem = setInterval(() => {
     if (parseFloat(item.innerHTML) < max) {

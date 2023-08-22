@@ -36,6 +36,12 @@
   }
   @include e(name) {
   }
+  @include e(heart) {
+    transition: all 0.2s ease;
+    &:hover {
+      cursor: pointer;
+    }
+  }
   @include e(more) {
     transition: all 0.3s ease-in-out;
     &:hover {
@@ -48,9 +54,16 @@
 }
 
 .chosen-dish {
+  @include e(back-svg-box) {
+    transform: translateX(6px);
+    transition: all 0.4 ease;
+    &:hover {
+      cursor: pointer;
+      animation: arrow 1s linear infinite;
+    }
+  }
   @include e(box) {
   }
-
   @include e(wines-box) {
   }
   @include e(wines-tab-text) {
@@ -63,5 +76,17 @@
   @include e(pointer) {
   }
   @include e(wines) {
+  }
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateX(6px) scale(1);
+  }
+  50% {
+    transform: translateX(-6px) scale(1.1);
+  }
+  100% {
+    transform: translateX(6px) scale(1);
   }
 }

@@ -3,7 +3,6 @@
   padding: 60px 0 0;
   background: no-repeat url("#{$i}backgrounds/image-3.jpg");
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.6);
   position: relative;
   @include e(header) {
     text-align: center;
