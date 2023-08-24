@@ -37,24 +37,11 @@ let des;
 
 function animateHeader() {
   const text = document.querySelector(".slick-current .heading__item-box");
-  text.style.opacity = 0;
-  text.style.top = `100px`;
+  text.style.animation = "moveTop 1.4s ease";
   setTimeout(() => {
-    const moveText = setInterval(() => {
-      text.style.top = `${parseFloat(text.style.top) - 0.5}px`;
-      parseFloat(text.style.top) < 50 && clearInterval(moveText);
-    }, 1);
-    const changeTextOp = setInterval(() => {
-      let val = parseFloat(text.style.opacity);
-      if (val < 1) {
-        val += 0.003;
-        text.style.opacity = val;
-        return;
-      }
-      clearInterval(changeTextOp);
-    }, 1);
-  }, 600);
-  return;
+    text.style.animation = "";
+    text.style.opacity = 1;
+  }, 1400);
 }
 
 $(".heading")

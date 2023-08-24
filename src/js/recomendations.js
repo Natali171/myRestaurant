@@ -1,5 +1,5 @@
-const key = "53e3f78b152c4c658d3733a68a64566a";
-// const key = "db254b5cd61744d39a2deebd9c361444";
+// const key = "53e3f78b152c4c658d3733a68a64566a";
+const key = "db254b5cd61744d39a2deebd9c361444";
 const requestOb = {};
 
 const message = document.querySelector(".dishes-offered__message");
@@ -95,16 +95,6 @@ function handleRecomendations(res) {
 }
 
 function renderRecomendations() {
-  // const namesEl = document.querySelectorAll(".dishes-offered__name");
-  // const imgs = document.querySelectorAll(".dishes-offered__img");
-  // namesEl.forEach((el, i) => {
-  //   el.textContent = "";
-  //   i < dishes.length && (el.textContent = dishes[i].name);
-  // });
-  // imgs.forEach((img, i) => {
-  //   img.setAttribute("src", "");
-  //   i < dishes.length && img.setAttribute("src", dishes[i].img);
-  // });
   const ul = document.createElement("ul");
   ul.classList.add("dishes-offered__box");
   ul.innerHTML = createRecomendationItem();
@@ -134,7 +124,7 @@ function createRecomendationItem() {
     <i class="dishes-offered__heart ${
       ob.fav ? "dishes-offered__heart_liked" : "".trim()
     } fa-solid fa-heart"></i>
-    <div id="more-info" class="dishes-offered__more">
+    <div class="dishes-offered__more">
       more info
     </div>
   </div>
@@ -143,3 +133,31 @@ function createRecomendationItem() {
   }, "");
   return lis;
 }
+
+//=====================================================================================================================================
+
+document.addEventListener("click", handleHeartClickRecomend);
+
+function handleHeartClickRecomend(e) {
+  const { target } = e;
+  if (!target.classList.contains("dishes-offered__heart")) {
+    return;
+  }
+  animateHeart();
+  const hearts = document.querySelectorAll(".dishes-offered__heart");
+  indx = [...hearts].findIndex((el) => el == target);
+  target.classList.contains("dishes-offered__heart_liked")
+    ? handleDislike(indx)
+    : handleLike(indx);
+  target.classList.toggle("dishes-offered__heart_liked");
+}
+
+function handleLike(indx) {
+  dishes[indx].fav = true;
+  localStorage.setItem(`Fav${dishes[indx].id}`, JSON.stringify(dishes[indx]));
+}
+
+function handleDislike(indx) {
+  delete localStorage[`Fav${dishes[indx].id}`];
+}
+//=====================================================================================================================================

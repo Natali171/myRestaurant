@@ -42,29 +42,8 @@
 }
 
 .chosen-dish {
-  // background: transparent;
   padding: 10px 30px;
   @include e(box) {
     padding: 56px;
-    // position: relative;
-    // z-index: 0;
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   border: 1px solid $mainColor;
-    //   left: 2%;
-    //   width: 96%;
-    //   top: -2%;
-    //   height: 104%;
-    // }
-  }
-
-  @include e(wines-box) {
-  }
-  @include e(wines-tab) {
-  }
-  @include e(pointer) {
-  }
-  @include e(wines) {
   }
 }

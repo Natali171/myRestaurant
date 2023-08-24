@@ -21,6 +21,7 @@ const jsArr = [
   path.resolve(__dirname, "src/js/recomendations.js"),
   path.resolve(__dirname, "src/js/chosenDish.js"),
   path.resolve(__dirname, "src/js/favourites.js"),
+  path.resolve(__dirname, "src/js/favsMore.js"),
   path.resolve(__dirname, "src/js/script.js"),
 ];
 

@@ -136,8 +136,8 @@
   @include e(heart) {
     color: $mainColor;
     opacity: 0.3;
-    font-size: rem(32px);
-    padding: 5px 20px;
+    font-size: rem(25px);
+    padding: 10px 16px;
     @include m(liked) {
       opacity: 1;
     }

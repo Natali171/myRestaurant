@@ -1,0 +1,11 @@
+.favs {
+  @include e(title) {
+    font-size: 45px;
+  }
+  @include e(box) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+    padding: 20px 50px;
+  }
+}

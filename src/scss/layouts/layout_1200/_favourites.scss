@@ -1,40 +1,18 @@
-.recomendation {
+.favs {
+  @include e(title) {
+    font-size: 60px;
+  }
   @include e(box) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+    padding: 30px 90px;
   }
-  @include e(form) {
-    width: 90%;
-    max-width: 700px;
-  }
-  @include e(form-group) {
-  }
-  @include e(lable) {
-  }
-  @include e(input) {
-  }
-  @include e(select) {
-  }
-  @include e(option) {
-  }
-  @include e(submit) {
-  }
-}
-
-.dishes-offered {
-  @include e(main-img-box) {
-    width: 500px;
-  }
-  @include e(main-img) {
-    width: 100%;
-    max-width: 100%;
-  }
-  @include e(img-box) {
-  }
-  @include e(img) {
-  }
-  @include e(name) {
+  @include e(xmark-img) {
+    transition: all 0.3s ease;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.2) rotate(180deg);
+    }
   }
   @include e(heart) {
     transition: all 0.3s ease;
@@ -54,7 +32,7 @@
   }
 }
 
-.chosen-dish {
+.favs-more {
   @include e(back-svg-box) {
     transform: translateX(6px);
     transition: all 0.4 ease;
@@ -71,3 +49,5 @@
     }
   }
 }
+
+

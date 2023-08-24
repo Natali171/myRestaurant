@@ -1,0 +1,234 @@
+.favs {
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+  }
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  z-index: 99998;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: all 3s ease;
+  @include e(container) {
+    position: relative;
+    background: $black repeat url("#{$i}backgrounds/pattern-4.png");
+    background-size: contain;
+    display: block;
+    margin: 160px auto 0;
+    min-height: 800px;
+    padding-bottom: 200px;
+  }
+  @include e(xmark-box) {
+    position: absolute;
+    right: 50px;
+    top: 20px;
+    width: 30px;
+  }
+  @include e(header) {
+    text-align: center;
+  }
+  @include e(divider) {
+    @extend %divider;
+  }
+  @include e(title) {
+    @extend %title;
+    padding-top: 40px;
+    margin-bottom: 20px;
+  }
+  @include e(message) {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.382);
+    border: thick double $mainColor;
+    font-family: $secondaryFontFamily;
+    font-size: rem(24px);
+    text-align: center;
+    line-height: 1.5;
+    margin: 0 auto;
+    padding: 20px;
+    color: $white;
+    max-width: 600px;
+  }
+  @include e(wraper) {
+  }
+  @include e(box) {
+    padding: 0 30px;
+  }
+  @include e(item) {
+    border: 1px solid $mainColor;
+    display: flex;
+    flex-direction: column;
+    padding: 18px 20px 14px 20px;
+    margin: 20px auto;
+    text-align: left;
+    list-style: none;
+    max-width: 350px;
+  }
+  @include e(img-box) {
+    align-self: center;
+    width: 100%;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  @include e(img) {
+    width: 100%;
+    max-width: 100%;
+    animation: scale-img 10s linear infinite;
+  }
+  @include e(name) {
+    flex: 1;
+    padding: 8px 20px 0;
+    font-family: $secondaryFontFamily;
+    color: $white;
+    font-size: rem(21px);
+    line-height: 1.5;
+    width: 100%;
+  }
+  @include e(meta) {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 14px;
+  }
+  @include e(heart) {
+    color: $mainColor;
+    opacity: 0.3;
+    font-size: rem(25px);
+    padding: 10px 16px;
+    @include m(liked) {
+      opacity: 1;
+    }
+  }
+  @include e(more) {
+    border: 1px solid $mainColor;
+    background-color: black;
+    margin: 5px 0 10px 0;
+    padding: 7px 14px;
+    font-family: $secondaryFontFamily;
+    color: $mainColor;
+    font-size: rem(16px);
+    text-align: right;
+    text-transform: capitalize;
+  }
+}
+
+.favs-more {
+  padding: 30px 16px;
+  height: 100%;
+  color: $white;
+  display: none;
+  margin: 0 auto;
+  max-width: 800px;
+  @include e(back-svg-box) {
+    max-width: 50px;
+    padding: 4px 10px;
+  }
+  @include e(box) {
+    padding: 30px 26px;
+    border: 1px solid $mainColor;
+  }
+  @include e(img-box) {
+    align-self: center;
+    max-width: 340px;
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  @include e(img) {
+    width: 100%;
+    max-width: 100%;
+    animation: scale-img 10s linear infinite;
+  }
+  @include e(name) {
+    padding: 20px 0;
+    font-family: $secondaryFontFamily;
+    color: $white;
+    font-size: rem(26px);
+    line-height: 1.5;
+  }
+
+  @include e(info) {
+    color: $mainColor;
+    border-block: 1px solid $mainColor;
+  }
+  @include e(time-box) {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+  }
+  @include e(time-icon) {
+    align-self: center;
+    font-size: rem(20px);
+  }
+
+  @include e(time) {
+    padding: 20px;
+    font-family: $baseFontFamily;
+    font-size: rem(20px);
+  }
+
+  @include e(price-box) {
+    display: flex;
+  }
+  @include e(price-icon) {
+    align-self: center;
+    font-size: rem(20px);
+  }
+  @include e(price) {
+    padding: 20px;
+    font-family: $baseFontFamily;
+
+    font-size: rem(20px);
+  }
+  @include e(price-dollar) {
+    font-family: $baseFontFamily;
+    font-size: rem(20px);
+  }
+  @include e(ingredients) {
+    padding: 20px 0;
+    font-family: $baseFontFamily;
+    color: $white;
+    font-size: rem(18px);
+    text-transform: capitalize;
+  }
+  @include e(wines-box) {
+  }
+  @include e(wines-link) {
+    display: flex;
+    color: $mainColor;
+    gap: 10px;
+    text-decoration: none;
+  }
+  @include e(wines-tab) {
+  }
+  @include e(wines-tab-text) {
+    font-family: $secondaryFontFamily;
+    font-size: rem(24px);
+  }
+  @include e(pointer) {
+    align-self: flex-end;
+  }
+  @include e(wines) {
+    display: none;
+  }
+  @include e(wine) {
+    position: relative;
+    display: block;
+    padding: 12px;
+    font-family: $secondaryFontFamily;
+    text-transform: capitalize;
+    font-size: rem(20px);
+    list-style-type: none;
+    &::before {
+      content: "";
+      background: no-repeat url("#{$i}icons/wine-glass-empty-solid.svg");
+      position: absolute;
+      left: -20px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

@@ -5,12 +5,12 @@ document.addEventListener("click", handleDishInfo);
 
 function handleDishInfo(e) {
   const { target } = e;
-  if (target.classList[0] !== "dishes-offered__more") {
+  if (!target.classList.contains("dishes-offered__more")) {
     return;
   }
   const moreInfo = document.querySelectorAll(".dishes-offered__more");
   i = [...moreInfo].findIndex((el) => el == target);
-  dishes[i].ingredients ? renderDishInfo() : getDishInfo(i);
+  dishes[i].ingredients ? renderDishInfo() : getDishInfo();
 }
 
 async function getDishInfo() {
@@ -21,7 +21,8 @@ async function getDishInfo() {
     );
     let res = await response.json();
     handleDishInfoResponse(res);
-  } catch (arr) {
+  } catch (err) {
+    console.log(err);
     displayMessage("Sorry, something went wrong. Please try again later");
   }
 }
@@ -48,9 +49,7 @@ function renderDishInfo() {
   displayEl("chosen-dish__pointer");
   displayEl("chosen-dish");
   for (let key in dishes[i]) {
-    key !== "img" &&
-      key !== "id" &&
-      key !== "wines" &&
+    key === "name" &&
       (document.querySelector(`.chosen-dish__${key}`).textContent =
         dishes[i][key]);
   }
@@ -64,7 +63,7 @@ document.addEventListener("click", handleGoBack);
 
 function handleGoBack(e) {
   const { target } = e;
-  if (target.classList[0] !== "chosen-dish__back-svg") {
+  if (!target.classList.contains("chosen-dish__back-svg")) {
     return;
   }
   hideEl("chosen-dish");
@@ -78,7 +77,7 @@ function handleWinesDisplay(e) {
   const { target } = e;
   e.preventDefault();
   e.stopPropagation();
-  if (target.classList[0] !== "chosen-dish__wines-tab-text") {
+  if (!target.classList.contains("chosen-dish__wines-tab-text")) {
     return;
   }
   document.querySelector(".chosen-dish__wines").innerHTML = dishes[i].wines;

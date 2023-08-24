@@ -1,7 +1,7 @@
-const videoOverlay = $(".video__play");
+const videoOverlay = $(".video__overlay");
 
 $(document).on("click", ".video__link", handleVideoOverlay);
-$(document).on("click", ".video__play", handleVideoOverlay);
+$(document).on("click", ".video__overlay", handleVideoOverlay);
 
 function handleVideoOverlay(e) {
   e.preventDefault();
