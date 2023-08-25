@@ -19,6 +19,7 @@ async function getFavsMore() {
     let res = await response.json();
     handleFavsMoreResponse(res);
   } catch (err) {
+    console.error(err);
     displayMessage("Sorry, something went wrong. Please try again later");
   }
 }
@@ -36,7 +37,6 @@ function handleFavsMoreResponse(res) {
       ""
     )) &&
     displayEl("favs-more__wines-box");
-  console.log(favs);
   renderFavsMore();
 }
 
@@ -71,11 +71,11 @@ document.addEventListener("click", handleFavsWinesDisplay);
 
 function handleFavsWinesDisplay(e) {
   const { target } = e;
-  e.preventDefault();
-  e.stopPropagation();
   if (!target.classList.contains("favs-more__wines-tab-text")) {
     return;
   }
+  e.preventDefault();
+  e.stopPropagation();
   document.querySelector(".favs-more__wines").innerHTML = favs[indx].wines;
 
   hideEl("favs-more__pointer");

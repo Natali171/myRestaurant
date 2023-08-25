@@ -77,7 +77,19 @@
 
 .dishes-offered {
   @include e(main-img-box) {
-    display: none;
+    margin: 20px auto 0;
+    width: 480px;
+    overflow: hidden;
+    text-align: center;
+    max-width: 290px;
+    @include m(visible) {
+      display: block;
+    }
+  }
+  @include e(main-img) {
+    width: 100%;
+    max-width: 100%;
+    animation: scale-img 10s linear infinite;
   }
   @include e(message) {
     display: none;

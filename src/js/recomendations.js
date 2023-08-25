@@ -99,10 +99,7 @@ function renderRecomendations() {
   ul.classList.add("dishes-offered__box");
   ul.innerHTML = createRecomendationItem();
   document.querySelector(".dishes-offered__wraper").appendChild(ul);
-
   hideEl("dishes-offered__message");
-  displayEl("chosen-dish__pointer");
-  displayEl("dishes-offered__wraper");
   delete requestOb.maxReadyTime;
 }
 

@@ -1,26 +1,23 @@
+const favsBlock = document.querySelector(".favs");
 let favs = [];
 
-document.addEventListener("click", function (e) {
-  const { target } = e;
-  if (!target.classList.contains("favs__xmark-img")) {
-    return;
-  }
-  favsBlock.classList.remove("visible");
-  document.querySelector(".wrapper").style.display = "block";
-});
-
 //==========================================================================================================================================
-const favsBlock = document.querySelector(".favs");
 
 document.addEventListener("click", handleFavouritesClick);
 
 function handleFavouritesClick(e) {
   const { target } = e;
-  if (!target.classList.contains("main-menu__link_fav")) {
+  if (
+    !target.classList.contains("main-menu__link_fav") &&
+    !target.classList.contains("mob-menu__link_fav")
+  ) {
     return;
   }
+  resetMobMenu();
+  hideEl("dishes-offered__wraper");
+  hideEl("dishes-offered__message");
+  displayEl("dishes-offered__main-img-box");
   const wrapper = document.querySelector(".wrapper");
-
   favsBlock.classList.toggle("visible");
   favsBlock.classList.contains("visible")
     ? (wrapper.style.display = "none")
@@ -31,10 +28,14 @@ function handleFavouritesClick(e) {
 function getFavourites() {
   let keys = Object.keys(localStorage);
   favs = [];
+  if (localStorage.length === 0) {
+    displayEl("favs__message");
+    hideEl("favs__wraper");
+    return;
+  }
   keys.forEach((key) => {
     favs.push(JSON.parse(localStorage.getItem(key)));
   });
-  console.log(favs);
   renderFavs();
 }
 
@@ -63,9 +64,9 @@ function renderFavs() {
   const favsBox = document.querySelector(".favs__box");
   favsBox.innerHTML = "";
   favsBox.innerHTML = createFavItem();
-  // hideEl("favs__message");
-  // displayEl("fav-dish__pointer");
-  // displayEl("fav-dish__wraper");
+  hideEl("favs__message");
+  // displayEl("favs-more__pointer");
+  displayEl("favs__wraper");
 }
 //==========================================================================================================================================
 document.addEventListener("click", handleHeartClickFavs);
@@ -106,4 +107,35 @@ function animateHeart() {
   const headerHeart = document.querySelector(".main-menu__heart");
   headerHeart.style.animation = "heart 1.4s linear";
   setTimeout(() => (headerHeart.style.animation = ""), 1000);
+}
+
+//==========================================================================================================================================
+
+document.addEventListener("click", handleXmarkClick);
+
+function handleXmarkClick(e) {
+  const { target } = e;
+  if (!target.classList.contains("favs__xmark-img")) {
+    return;
+  }
+  closeFavourites();
+}
+
+//==========================================================================================================================================
+document.addEventListener("click", handleGoToRecomendationsClick);
+
+function handleGoToRecomendationsClick(e) {
+  const { target } = e;
+  if (
+    !target.classList.contains("favs__message-link") &&
+    !target.classList.contains("favs__link")
+  ) {
+    return;
+  }
+  closeFavourites();
+}
+
+function closeFavourites() {
+  favsBlock.classList.remove("visible");
+  document.querySelector(".wrapper").style.display = "block";
 }

@@ -20,4 +20,7 @@
   @include e(box) {
     top: 16%;
   }
+  @include e(xmark-box) {
+    right: 20px;
+  }
 }

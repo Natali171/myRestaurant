@@ -27,7 +27,7 @@
               </p>
             </div>
             <div class="button heading__button">
-              <a class="button__link">
+              <a href="#menu" class="button__link">
                 <div
                   class="button__text button__text_first button__text_transparent"
                 >
@@ -53,7 +53,7 @@
               </p>
             </div>
             <div class="button heading__button">
-              <a class="button__link">
+              <a href="#menu" class="button__link">
                 <div
                   class="button__text button__text_first button__text_transparent"
                 >
@@ -79,7 +79,7 @@
               </p>
             </div>
             <div class="button heading__button">
-              <a class="button__link">
+              <a href="#menu" class="button__link">
                 <div
                   class="button__text button__text_first button__text_transparent"
                 >
@@ -95,12 +95,12 @@
           </div>
         </div>
         <div class="header__arrows"></div>
-        <div class="book">
-          <a href="" class="book__link">
+        <a href="#booking" class="book__link">
+          <div class="book">
             <img src="i/resource/book-icon-1.png" alt="" class="book__img" />
             <div class="book__text">book a table</div>
-          </a>
-        </div>
+          </div>
+        </a>
         <div class="header__static-box">
           <div class="header_contacts">
             <div class="header_contacts__adress">
@@ -132,9 +132,6 @@
               <ul class="main-menu__box">
                 <li class="main-menu__item">
                   <a href="#" class="main-menu__link">home</a>
-                </li>
-                <li class="main-menu__item">
-                  <a href="#" class="main-menu__link">about us</a>
                 </li>
                 <li class="main-menu__item">
                   <a href="#" class="main-menu__link"
@@ -246,7 +243,7 @@
                   </ul>
                 </li>
                 <li class="main-menu__item">
-                  <a href="#" class="main-menu__link">contact</a>
+                  <a href="#chefs" class="main-menu__link">our chefs</a>
                 </li>
                 <li class="main-menu__item main-menu__item_fav">
                   <a href="#" class="main-menu__link main-menu__link_fav"
@@ -257,7 +254,7 @@
               </ul>
             </nav>
             <div class="button">
-              <a class="button__link">
+              <a href="#booking" class="button__link">
                 <div
                   class="button__text button__text_first button__text_colored"
                 >
@@ -284,8 +281,18 @@
               <img src="i/separator.svg" alt="" class="menu__divider" />
             </div>
           </div>
+          <div class="favs__message">
+            No favourite dishes found
+            <a href="#recomendations" class="favs__message-link"
+              >Click here to find dishes you'll enjoy</a
+            >
+          </div>
           <div class="favs__wraper">
             <ul class="favs__box"></ul>
+            <a href="#recomendations" class="favs__link"
+              >Find more dishes you'll enjoy
+              <i class="fa-solid fa-arrow-pointer"></i
+            ></a>
           </div>
           <div class="favs-more">
             <div class="favs-more__back-svg-box">
@@ -410,10 +417,12 @@
             </ul>
           </li>
           <li class="mob-menu__item">
-            <a href="#" class="mob-menu__link">our chefs</a>
+            <a href="#chefs" class="mob-menu__link">our chefs</a>
           </li>
           <li class="mob-menu__item">
-            <a href="#" class="mob-menu__link">favourite dishes</a>
+            <a href="#" class="mob-menu__link mob-menu__link_fav"
+              >favourite dishes</a
+            >
           </li>
         </ul>
       </nav>
@@ -438,7 +447,7 @@
                 aliquam dignissimos? Dolores, eveniet.
               </p>
               <div class="menu-sections__item">
-                <a href="#" class="menu-sections__link">
+                <a href="#menu" class="menu-sections__link">
                   <div class="menu-sections__img-box">
                     <img
                       src="i/resource/offer-image-1.jpg"
@@ -447,11 +456,12 @@
                     />
                   </div>
                   <h3 class="menu-sections__name">Breakfast</h3>
-                  <div class="menu-sections__menu-link">view menu</div>
-                </a>
+
+                  <div class="menu-sections__menu-link">view menu</div></a
+                >
               </div>
               <div class="menu-sections__item">
-                <a href="#" class="menu-sections__link">
+                <a href="#menu" class="menu-sections__link">
                   <div class="menu-sections__img-box">
                     <img
                       src="i/resource/offer-image-3.jpg"
@@ -464,7 +474,7 @@
                 </a>
               </div>
               <div class="menu-sections__item">
-                <a href="#" class="menu-sections__link">
+                <a href="#menu" class="menu-sections__link">
                   <div class="menu-sections__img-box">
                     <img
                       src="i/resource/offer-image-2.jpg"
@@ -478,7 +488,7 @@
               </div>
             </div>
           </section>
-          <section class="menu">
+          <section id="menu" class="menu">
             <div class="menu__header">
               <div class="menu__subtitle">SPECIAL SELECTION</div>
               <div class="menu__divider-box">
@@ -983,7 +993,7 @@
               <span class="menu__data-time">9:00 pm</span>
             </p>
             <div class="button">
-              <a class="button__link">
+              <a href="#menu" class="button__link">
                 <div
                   class="button__text button__text_first button__text_transparent"
                 >
@@ -997,7 +1007,7 @@
               </a>
             </div>
           </section>
-          <section class="recomendation">
+          <section id="recomendations" class="recomendation">
             <div class="recomendation__header">
               <div class="recomendation__subtitle">
                 Recommendations for choosing a meal
@@ -1432,7 +1442,7 @@
               </div>
             </div>
             <div class="button">
-              <a class="button__link">
+              <a href="#menu" class="button__link">
                 <div
                   class="button__text button__text_first button__text_transparent"
                 >
@@ -1455,16 +1465,23 @@
               <h2 class="video__title">Watch Our Video</h2>
             </div>
             <div class="video__overlay">
-              <!-- <div class="video__wrap">
-              <iframe
-                class="video__video"
-                src="https://www.youtube.com/embed/53nwh1aHCU8"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-            </div> -->
+              <div class="video__wrap">
+                <div class="video__xmark-box">
+                  <img
+                    src="i/icons/xmark-solid.svg"
+                    alt=""
+                    class="video__xmark-img"
+                  />
+                </div>
+                <iframe
+                  class="video__video"
+                  src="https://www.youtube.com/embed/53nwh1aHCU8"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
             </div>
             <div class="video__box">
               <a href="" class="video__link">
@@ -1568,7 +1585,7 @@
               </ul>
             </div>
           </section>
-          <aside class="reservation">
+          <aside id="booking" class="reservation">
             <div class="reservation__wrap">
               <article class="reservation__box">
                 <h2 class="reservation__title">Online Reservation</h2>
@@ -1690,14 +1707,12 @@
                   <button class="button reservation__submit" type="submit">
                     <a class="button__link">
                       <div
-                        id="reservation-submit"
-                        class="button__text button__text_first button__text_colored"
+                        class="button__text button__text_first button__text_colored reservation__btn"
                       >
                         Book a table
                       </div>
                       <div
-                        id="reservation-submit"
-                        class="button__text button__text_second button__text_transparent reservation__submit"
+                        class="button__text button__text_second button__text_transparent reservation__btn"
                       >
                         Book a table
                       </div>
@@ -1724,7 +1739,7 @@
               </article>
             </div>
           </aside>
-          <section class="team">
+          <section id="chefs" class="team">
             <div class="team__header">
               <div class="team__subtitle">EXPERIENCED TEAM</div>
               <div class="team__divider-box">
@@ -1744,21 +1759,33 @@
                     <div class="chefs-contacts">
                       <ul class="chefs-contacts__box">
                         <li class="chefs-contacts__item">
-                          <a href="" class="chefs-contacts__link">
+                          <a
+                            href="https://twitter.com/"
+                            class="chefs-contacts__link"
+                            target="_blank"
+                          >
                             <i
                               class="chefs-contacts__icon fa-brands fa-twitter"
                             ></i>
                           </a>
                         </li>
                         <li class="chefs-contacts__item">
-                          <a href="" class="chefs-contacts__link">
+                          <a
+                            href="https://www.facebook.com/"
+                            class="chefs-contacts__link"
+                            target="_blank"
+                          >
                             <i
                               class="chefs-contacts__icon chefs-contacts__icon_fb fa-brands fa-facebook-f"
                             ></i>
                           </a>
                         </li>
                         <li class="chefs-contacts__item">
-                          <a href="" class="chefs-contacts__link">
+                          <a
+                            href="https://www.instagram.com/"
+                            class="chefs-contacts__link"
+                            target="_blank"
+                          >
                             <i
                               class="chefs-contacts__icon fa-brands fa-instagram"
                             ></i>
@@ -1784,21 +1811,33 @@
                     <div class="chefs-contacts">
                       <ul class="chefs-contacts__box">
                         <li class="chefs-contacts__item">
-                          <a href="" class="chefs-contacts__link">
+                          <a
+                            href="https://twitter.com/"
+                            class="chefs-contacts__link"
+                            target="_blank"
+                          >
                             <i
                               class="chefs-contacts__icon fa-brands fa-twitter"
                             ></i>
                           </a>
                         </li>
                         <li class="chefs-contacts__item">
-                          <a href="" class="chefs-contacts__link">
+                          <a
+                            href="https://www.facebook.com/"
+                            class="chefs-contacts__link"
+                            target="_blank"
+                          >
                             <i
                               class="chefs-contacts__icon chefs-contacts__icon_fb fa-brands fa-facebook-f"
                             ></i>
                           </a>
                         </li>
                         <li class="chefs-contacts__item">
-                          <a href="" class="chefs-contacts__link">
+                          <a
+                            href="https://www.instagram.com/"
+                            class="chefs-contacts__link"
+                            target="_blank"
+                          >
                             <i
                               class="chefs-contacts__icon fa-brands fa-instagram"
                             ></i>
@@ -1824,21 +1863,33 @@
                     <div class="chefs-contacts">
                       <ul class="chefs-contacts__box">
                         <li class="chefs-contacts__item">
-                          <a href="" class="chefs-contacts__link">
+                          <a
+                            href="https://twitter.com/"
+                            class="chefs-contacts__link"
+                            target="_blank"
+                          >
                             <i
                               class="chefs-contacts__icon fa-brands fa-twitter"
                             ></i>
                           </a>
                         </li>
                         <li class="chefs-contacts__item">
-                          <a href="" class="chefs-contacts__link">
+                          <a
+                            href="https://www.facebook.com/"
+                            class="chefs-contacts__link"
+                            target="_blank"
+                          >
                             <i
                               class="chefs-contacts__icon chefs-contacts__icon_fb fa-brands fa-facebook-f"
                             ></i>
                           </a>
                         </li>
                         <li class="chefs-contacts__item">
-                          <a href="" class="chefs-contacts__link">
+                          <a
+                            href="https://www.instagram.com/"
+                            class="chefs-contacts__link"
+                            target="_blank"
+                          >
                             <i
                               class="chefs-contacts__icon fa-brands fa-instagram"
                             ></i>
@@ -1866,35 +1917,60 @@
                 <a href="#" class="footer__link">HOME</a>
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">MENUS</a>
+                <a href="#menu" class="footer__link">MENUS</a>
               </li>
               <li class="footer__item">
                 <a href="#" class="footer__link">ABOUT US</a>
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">OUR CHEFS</a>
+                <a href="#chefs" class="footer__link">OUR CHEFS</a>
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">CONTACT</a>
+                <a href="#contacts" class="footer__link">CONTACT</a>
               </li>
             </ul>
           </div>
-          <div class="footer__contact-links">
+          <div id="contacts" class="footer__contact-links">
             <ul class="footer__link-box">
               <li class="footer__item">
-                <a href="#" class="footer__link">FACEBOOK</a>
+                <a
+                  href="https://www.facebook.com/"
+                  class="footer__link"
+                  target="_blank"
+                  >FACEBOOK</a
+                >
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">INSTAGRAM</a>
+                <a
+                  href="https://www.instagram.com/"
+                  class="footer__link"
+                  target="_blank"
+                  >INSTAGRAM</a
+                >
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">TWITTER</a>
+                <a
+                  href="https://twitter.com/"
+                  class="footer__link"
+                  target="_blank"
+                  >TWITTER</a
+                >
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">YOUTUBE</a>
+                <a
+                  href="https://www.youtube.com/"
+                  class="footer__link"
+                  target="_blank"
+                  >YOUTUBE</a
+                >
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">GOOGLE MAP</a>
+                <a
+                  href="https://www.google.com/maps"
+                  class="footer__link"
+                  target="_blank"
+                  >GOOGLE MAP</a
+                >
               </li>
             </ul>
           </div>
@@ -1937,16 +2013,14 @@
                   class="footer-subscription__email"
                 />
                 <button class="button reservation__submit" type="submit">
-                  <a id="subscription-submit" class="button__link">
+                  <a class="button__link">
                     <div
-                      id="subscription-submit"
-                      class="button__text button__text_first button__text_colored footer-subscription__submit"
+                      class="button__text button__text_first button__text_colored footer-subscription__submit subscription__btn"
                     >
                       Subscribe
                     </div>
                     <div
-                      id="subscription-submit"
-                      class="button__text button__text_second button__text_transparent footer-subscription__submit"
+                      class="button__text button__text_second button__text_transparent footer-subscription__submit subscription__btn"
                     >
                       Subscribe
                     </div>

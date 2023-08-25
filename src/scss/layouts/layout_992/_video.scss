@@ -6,10 +6,14 @@
     top: 80x;
   }
   @include e(wrap) {
-    margin: 8% 20%;
+    margin: 14% 20%;
   }
   @include e(video) {
     height: 420px;
+  }
+  @include e(xmark-box) {
+    right: 5%;
+    top: 100px;
   }
 }
 

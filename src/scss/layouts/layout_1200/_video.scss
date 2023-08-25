@@ -1,2 +1,9 @@
 .video {
+  @include e(xmark-img) {
+    transition: all 0.3s ease;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.2) rotate(180deg);
+    }
+  }
 }

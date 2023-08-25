@@ -4,7 +4,7 @@ const mobMenu = $(".mob-menu");
 
 $(document).on("click", ".header__menu-button", handleMenu);
 $(document).on("click", ".mob-menu__is-submenu", handleToggleMenu);
-$(document).on("click", ".mob-menu__button", resetMobileMenu);
+$(document).on("click", ".mob-menu__button", handleResetMobileMenu);
 
 function handleMenu(e) {
   e.preventDefault();
@@ -31,8 +31,12 @@ function handleToggleMenu(e) {
   });
 }
 
-function resetMobileMenu(e) {
+function handleResetMobileMenu(e) {
   e.preventDefault();
+  resetMobMenu();
+}
+
+function resetMobMenu() {
   darkOverlay.removeClass("visible");
   mobMenu.removeClass("visible");
   $(".mob-menu__box .mob-menu__has-submenu")

@@ -22,7 +22,7 @@ async function getDishInfo() {
     let res = await response.json();
     handleDishInfoResponse(res);
   } catch (err) {
-    console.log(err);
+    console.error(err);
     displayMessage("Sorry, something went wrong. Please try again later");
   }
 }
@@ -75,11 +75,11 @@ document.addEventListener("click", handleWinesDisplay);
 
 function handleWinesDisplay(e) {
   const { target } = e;
-  e.preventDefault();
-  e.stopPropagation();
   if (!target.classList.contains("chosen-dish__wines-tab-text")) {
     return;
   }
+  e.preventDefault();
+  e.stopPropagation();
   document.querySelector(".chosen-dish__wines").innerHTML = dishes[i].wines;
 
   hideEl("chosen-dish__pointer");

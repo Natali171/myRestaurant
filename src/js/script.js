@@ -1,10 +1,9 @@
-const videoOverlay = $(".video__overlay");
-
 $(document).on("click", ".video__link", handleVideoOverlay);
-$(document).on("click", ".video__overlay", handleVideoOverlay);
+$(document).on("click", ".video__xmark-box", handleVideoOverlay);
 
 function handleVideoOverlay(e) {
   e.preventDefault();
+  const videoOverlay = $(".video__overlay");
   videoOverlay.toggleClass("visible");
 }
 

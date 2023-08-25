@@ -1,0 +1,5 @@
+.video {
+  @include e(xmark-box) {
+    width: 30px;
+  }
+}

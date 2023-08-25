@@ -3,7 +3,7 @@
     font-size: 60px;
   }
   @include e(box) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 30px;
     padding: 30px 90px;
   }
@@ -49,5 +49,3 @@
     }
   }
 }
-
-

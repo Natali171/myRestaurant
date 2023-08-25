@@ -1,3 +1,11 @@
+.favs {
+  @include e(xmark-box) {
+    right: 50px;
+    top: 20px;
+    width: 30px;
+  }
+}
+
 .favs-more {
   @include e(box) {
     padding: 60px;

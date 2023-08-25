@@ -170,8 +170,10 @@
     border: 2px solid $mainColor;
     position: relative;
     text-decoration: none;
+    color: inherit;
   }
   @include e(text) {
+    text-align: center;
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: rem(14px);
@@ -186,6 +188,8 @@
       background-color: $mainColor;
     }
     @include m(second) {
+      left: 0;
+      right: 0;
       position: absolute;
       bottom: -54px;
     }

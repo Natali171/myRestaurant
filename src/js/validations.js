@@ -8,7 +8,7 @@ document.addEventListener("click", handleSubscription);
 
 function handleSubscription(e) {
   const { target } = e;
-  if (target.id !== "subscription-submit") {
+  if (!target.classList.contains("subscription__btn")) {
     return;
   }
   e.preventDefault();
@@ -42,7 +42,7 @@ function handleSuccessSubscription() {
 
 function handleReservationSubmit(e) {
   const { target } = e;
-  if (target.id !== "reservation-submit") {
+  if (!target.classList.contains("reservation__btn")) {
     return;
   }
   e.preventDefault();
@@ -55,7 +55,6 @@ function validateReservation() {
   validateName() && res++;
   validateEmail("reservation__input_email") && res++;
   validateDateTime() && res++;
-  console.log(res);
   res === 3 && handleSuccessReservation();
 }
 
