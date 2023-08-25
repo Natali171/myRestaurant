@@ -122,20 +122,4 @@ function handleXmarkClick(e) {
 }
 
 //==========================================================================================================================================
-document.addEventListener("click", handleGoToRecomendationsClick);
 
-function handleGoToRecomendationsClick(e) {
-  const { target } = e;
-  if (
-    !target.classList.contains("favs__message-link") &&
-    !target.classList.contains("favs__link")
-  ) {
-    return;
-  }
-  closeFavourites();
-}
-
-function closeFavourites() {
-  favsBlock.classList.remove("visible");
-  document.querySelector(".wrapper").style.display = "block";
-}

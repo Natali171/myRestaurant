@@ -7,6 +7,28 @@ function handleVideoOverlay(e) {
   videoOverlay.toggleClass("visible");
 }
 
+document.addEventListener("click", handleGoTo);
+
+function handleGoTo(e) {
+  const { target } = e;
+  if (
+    !target.classList.contains("favs__message-link") &&
+    !target.classList.contains("favs__link") &&
+    !target.classList.contains("find-table") &&
+    !target.classList.contains("main-menu__link_chefs") &&
+    !target.classList.contains("main-menu__link_home")
+  ) {
+    return;
+  }
+  resetMobMenu();
+  closeFavourites();
+}
+
+function closeFavourites() {
+  favsBlock.classList.remove("visible");
+  document.querySelector(".wrapper").style.display = "block";
+}
+
 // ================================================================================================================
 function initMobile() {
   k = 80;
