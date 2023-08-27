@@ -24,11 +24,6 @@ function handleGoTo(e) {
   closeFavourites();
 }
 
-function closeFavourites() {
-  favsBlock.classList.remove("visible");
-  document.querySelector(".wrapper").style.display = "block";
-}
-
 function initMobile() {
   k = 80;
   console.log("is-mobile");
@@ -42,6 +37,7 @@ function initTablet() {
 function initDesktop() {
   k = 140;
   console.log("is-desktop");
+  resetMobMenu();
 }
 
 ssm.addStates([

@@ -1,5 +1,5 @@
 // const key = "53e3f78b152c4c658d3733a68a64566a";
-const key = "db254b5cd61744d39a2deebd9c361444";
+const key = "db254b5cd61744d39a2deebd9c361445";
 const requestOb = {};
 
 const message = document.querySelector(".dishes-offered__message");
@@ -70,9 +70,11 @@ async function getRecomendations(request) {
 }
 
 function handleRecomendations(res) {
-  hideEl("dishes-offered__main-img-box");
-  hideEl("chosen-dish");
-  hideEl("dishes-offered__wraper");
+  [
+    "dishes-offered__main-img-box",
+    "chosen-dish",
+    "dishes-offered__wraper",
+  ].forEach((cl) => hideEl(cl));
   dishes = [];
   document.querySelector(".dishes-offered__wraper").innerHTML = "";
   if (res.results.length === 0) {
@@ -96,11 +98,11 @@ function handleRecomendations(res) {
 }
 
 function renderRecomendations() {
+  hideEl("dishes-offered__message");
   const ul = document.createElement("ul");
   ul.classList.add("dishes-offered__box");
   ul.innerHTML = createRecomendationItem();
   document.querySelector(".dishes-offered__wraper").appendChild(ul);
-  hideEl("dishes-offered__message");
   delete requestOb.maxReadyTime;
 }
 

@@ -5,7 +5,7 @@ const chefsBox = document.querySelector(".chefs__items-box");
 
 let k;
 
-$(document).on("scroll", handleScroll);
+document.addEventListener("scroll", handleScroll);
 
 function fixMenu() {
   menu.getBoundingClientRect().top + k < window.pageYOffset &&
@@ -32,7 +32,8 @@ function handleScroll() {
 }
 
 function count(el, max) {
-  const step = 15000 / max;
+  const k = 15000;
+  const step = k / max;
   const item = document.querySelector(`.counter__${el}`);
   const increaseItem = setInterval(() => {
     if (parseFloat(item.innerHTML) < max) {

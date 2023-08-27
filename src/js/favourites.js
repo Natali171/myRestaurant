@@ -1,9 +1,9 @@
 const favsBlock = document.querySelector(".favs");
 let favs = [];
 
-//==========================================================================================================================================
-
 document.addEventListener("click", handleFavouritesClick);
+document.addEventListener("click", handleHeartClickFavs);
+document.addEventListener("click", handleXmarkClick);
 
 function handleFavouritesClick(e) {
   const { target } = e;
@@ -15,17 +15,23 @@ function handleFavouritesClick(e) {
     return;
   }
   resetMobMenu();
-  hideEl("dishes-offered__wraper");
-  hideEl("dishes-offered__message");
-  displayEl("dishes-offered__main-img-box");
-  const wrapper = document.querySelector(".wrapper");
-  favsBlock.classList.toggle("visible");
-  favsBlock.classList.contains("visible")
-    ? (wrapper.style.display = "none")
-    : (wrapper.style.display = "block");
-
+  if (favsBlock.classList.contains("visible")) {
+    closeFavourites();
+    return;
+  }
   getFavourites();
+  displayFavourites();
 }
+
+function displayFavourites() {
+  document.querySelector(".wrapper").style.display = "none";
+  favsBlock.classList.add("visible");
+  ["chosen-dish", "dishes-offered__wraper", "dishes-offered__message"].forEach(
+    (cl) => hideEl(cl)
+  );
+  displayEl("dishes-offered__main-img-box");
+}
+
 function getFavourites() {
   let keys = Object.keys(localStorage);
   favs = [];
@@ -66,11 +72,8 @@ function renderFavs() {
   favsBox.innerHTML = "";
   favsBox.innerHTML = createFavItem();
   hideEl("favs__message");
-  // displayEl("favs-more__pointer");
   displayEl("favs__wraper");
 }
-//==========================================================================================================================================
-document.addEventListener("click", handleHeartClickFavs);
 
 function handleHeartClickFavs(e) {
   const { target } = e;
@@ -110,9 +113,11 @@ function animateHeart() {
   setTimeout(() => (headerHeart.style.animation = ""), 1000);
 }
 
-//==========================================================================================================================================
-
-document.addEventListener("click", handleXmarkClick);
+function closeFavourites() {
+  favsBlock.classList.remove("visible");
+  hideEl("favs-more");
+  document.querySelector(".wrapper").style.display = "block";
+}
 
 function handleXmarkClick(e) {
   const { target } = e;
@@ -121,5 +126,3 @@ function handleXmarkClick(e) {
   }
   closeFavourites();
 }
-
-//==========================================================================================================================================

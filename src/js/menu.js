@@ -14,19 +14,18 @@ function handleMenu(e) {
 function handleToggleMenu(e) {
   e.preventDefault();
   const $this = $(this);
-  $this.parent(".mob-menu__has-submenu").toggleClass("opened");
-  $this.next("ul").slideToggle(300, function () {
+  $this
+    .parent(".mob-menu__has-submenu")
+    .toggleClass("opened")
+    .siblings("li")
+    .removeClass("opened")
+    .find("ul")
+    .hide();
+  $this.next("ul").slideToggle(700, function () {
     $(this)
       .find(".mob-menu__has-submenu")
       .removeClass("opened")
       .children("ul")
-      .hide();
-    $this
-      .parent(".mob-menu__has-submenu")
-      .toggleClass("opened")
-      .siblings("li")
-      .removeClass("opened")
-      .find("ul")
       .hide();
   });
 }
