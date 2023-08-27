@@ -6,6 +6,7 @@ const message = document.querySelector(".dishes-offered__message");
 
 document.addEventListener("change", handleSelect);
 document.addEventListener("click", handleRecomendationSubmit);
+document.addEventListener("click", handleHeartClickRecomend);
 
 function handleSelect(e) {
   const { target } = e;
@@ -131,10 +132,6 @@ function createRecomendationItem() {
   return lis;
 }
 
-//=====================================================================================================================================
-
-document.addEventListener("click", handleHeartClickRecomend);
-
 function handleHeartClickRecomend(e) {
   const { target } = e;
   if (!target.classList.contains("dishes-offered__heart")) {
@@ -157,4 +154,3 @@ function handleLike(indx) {
 function handleDislike(indx) {
   delete localStorage[`Fav${dishes[indx].id}`];
 }
-//=====================================================================================================================================

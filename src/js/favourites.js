@@ -9,7 +9,8 @@ function handleFavouritesClick(e) {
   const { target } = e;
   if (
     !target.classList.contains("main-menu__link_fav") &&
-    !target.classList.contains("mob-menu__link_fav")
+    !target.classList.contains("mob-menu__link_fav") &&
+    !target.classList.contains("main-menu__heart")
   ) {
     return;
   }
@@ -122,4 +123,3 @@ function handleXmarkClick(e) {
 }
 
 //==========================================================================================================================================
-

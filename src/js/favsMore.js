@@ -1,17 +1,29 @@
-document.addEventListener("click", handleFavsMore);
 let indx;
+
+document.addEventListener("click", handleFavsMore);
+document.addEventListener("click", handleFavsGoBack);
+document.addEventListener("click", handleFavsWinesDisplay);
+
 function handleFavsMore(e) {
   const { target } = e;
-  if (!target.classList.contains("favs__more")) {
+  if (
+    !target.classList.contains("favs__more") &&
+    !target.classList.contains("favs__img")
+  ) {
     return;
   }
-  const moreInfo = document.querySelectorAll(".favs__more");
-  indx = [...moreInfo].findIndex((el) => el == target);
+  if (target.classList.contains("favs__more")) {
+    const moreInfo = document.querySelectorAll(".favs__more");
+    indx = [...moreInfo].findIndex((el) => el == target);
+  } else {
+    const imgs = document.querySelectorAll(".favs__img");
+    indx = [...imgs].findIndex((el) => el == target);
+  }
   favs[indx].ingredients ? renderFavsMore() : getFavsMore();
 }
 
 async function getFavsMore() {
-  id = favs[indx].id;
+  const id = favs[indx].id;
   try {
     let response = await fetch(
       `https://api.spoonacular.com/recipes/${id}/information?apiKey=${key}&includeNutrition=false`
@@ -53,10 +65,6 @@ function renderFavsMore() {
   document.querySelector(".favs-more__img").setAttribute("src", favs[indx].img);
 }
 
-// =====================================================================================================================================
-
-document.addEventListener("click", handleFavsGoBack);
-
 function handleFavsGoBack(e) {
   const { target } = e;
   if (!target.classList.contains("favs-more__back-svg")) {
@@ -65,9 +73,6 @@ function handleFavsGoBack(e) {
   hideEl("favs-more");
   displayEl("favs__wraper");
 }
-
-// =====================================================================================================================================
-document.addEventListener("click", handleFavsWinesDisplay);
 
 function handleFavsWinesDisplay(e) {
   const { target } = e;

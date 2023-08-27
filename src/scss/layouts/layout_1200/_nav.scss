@@ -10,6 +10,7 @@
     @include m(fav) {
       &:hover .main-menu__heart {
         opacity: 1;
+        cursor: pointer;
       }
     }
   }

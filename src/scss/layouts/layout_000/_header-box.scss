@@ -18,6 +18,7 @@
     width: 100%;
     padding: 10px 20px 4px;
     transition: all 1.6s ease;
+    max-width: 1600px;
   }
   @include e(fixed) {
     background-color: rgb(31, 31, 31);
@@ -191,7 +192,7 @@
       left: 0;
       right: 0;
       position: absolute;
-      bottom: -54px;
+      bottom: -54.4px;
     }
   }
 }
@@ -202,4 +203,16 @@
 
 .slick-current {
   animation: header 10s linear infinite;
+}
+
+@keyframes header {
+  0% {
+    background-size: 350%;
+  }
+  50% {
+    background-size: 400%;
+  }
+  100% {
+    background-size: 350%;
+  }
 }

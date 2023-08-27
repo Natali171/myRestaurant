@@ -30,6 +30,25 @@
       color: black;
     }
   }
+  @include e(img) {
+    transition: all 0.3s ease;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  @include e(link) {
+    transition: all 0.3s ease;
+    &:hover {
+      color: $mainColor;
+    }
+  }
+  @include e(message-link) {
+    transition: all 0.3s ease;
+    &:hover {
+      color: $mainColor;
+    }
+  }
 }
 
 .favs-more {

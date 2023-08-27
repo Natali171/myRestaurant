@@ -2,6 +2,8 @@ let i;
 let dishes = [];
 
 document.addEventListener("click", handleDishInfo);
+document.addEventListener("click", handleGoBack);
+document.addEventListener("click", handleWinesDisplay);
 
 function handleDishInfo(e) {
   const { target } = e;
@@ -14,7 +16,7 @@ function handleDishInfo(e) {
 }
 
 async function getDishInfo() {
-  id = dishes[i].id;
+  const id = dishes[i].id;
   try {
     let response = await fetch(
       `https://api.spoonacular.com/recipes/${id}/information?apiKey=${key}&includeNutrition=false`
@@ -58,9 +60,6 @@ function renderDishInfo() {
     .setAttribute("src", dishes[i].img);
 }
 
-// =====================================================================================================================================
-document.addEventListener("click", handleGoBack);
-
 function handleGoBack(e) {
   const { target } = e;
   if (!target.classList.contains("chosen-dish__back-svg")) {
@@ -69,9 +68,6 @@ function handleGoBack(e) {
   hideEl("chosen-dish");
   displayEl("dishes-offered__wraper");
 }
-
-// =====================================================================================================================================
-document.addEventListener("click", handleWinesDisplay);
 
 function handleWinesDisplay(e) {
   const { target } = e;
@@ -85,5 +81,3 @@ function handleWinesDisplay(e) {
   hideEl("chosen-dish__pointer");
   displayEl("chosen-dish__wines");
 }
-
-// =====================================================================================================================================

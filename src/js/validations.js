@@ -38,8 +38,6 @@ function handleSuccessSubscription() {
   setTimeout(() => hideEl("footer-subscription__form"), 800);
 }
 
-// ====================================================================================================================================
-
 function handleReservationSubmit(e) {
   const { target } = e;
   if (!target.classList.contains("reservation__btn")) {

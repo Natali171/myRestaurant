@@ -1,5 +1,5 @@
 $(document).on("click", ".video__link", handleVideoOverlay);
-$(document).on("click", ".video__xmark-box", handleVideoOverlay);
+$(document).on("click", ".video__overlay", handleVideoOverlay);
 
 function handleVideoOverlay(e) {
   e.preventDefault();
@@ -29,7 +29,6 @@ function closeFavourites() {
   document.querySelector(".wrapper").style.display = "block";
 }
 
-// ================================================================================================================
 function initMobile() {
   k = 80;
   console.log("is-mobile");

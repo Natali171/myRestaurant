@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>title</title>
+    <title>Restaurant</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -288,8 +288,9 @@
           <div class="favs__message">
             No favourite dishes found
             <a href="#recomendations" class="favs__message-link"
-              >Click here to find dishes you'll enjoy</a
-            >
+              >Click here to find dishes you'll enjoy
+              <i class="fa-solid fa-arrow-pointer"></i
+            ></a>
           </div>
           <div class="favs__wraper">
             <ul class="favs__box"></ul>
@@ -1095,6 +1096,7 @@
                     id="maxReadyTime"
                     type="text"
                     placeholder="Сooking time"
+                    autocomplete="off"
                     class="recomendation__input recomendation__input_time"
                   />
                 </div>
@@ -1605,11 +1607,13 @@
                   <input
                     type="text"
                     placeholder="Your Full Name"
+                    autocomplete="off"
                     class="reservation__input reservation__input_name"
                   />
                   <input
                     type="text"
                     placeholder="Email"
+                    autocomplete="off"
                     class="reservation__input reservation__input_email"
                   />
                   <select

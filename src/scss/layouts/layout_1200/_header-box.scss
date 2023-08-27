@@ -19,7 +19,7 @@
     z-index: 200;
     left: 0;
     right: 0;
-    margin: 150px auto 80px;
+    margin: 250px auto 80px;
   }
   @include e(title) {
     font-size: 90px;
@@ -36,7 +36,7 @@
       opacity: 0;
     }
     &:hover .button__text_second {
-      transform: translateY(-54px);
+      transform: translateY(-54.4px);
     }
     &:hover {
       cursor: pointer;
